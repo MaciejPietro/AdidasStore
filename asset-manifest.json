@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/AdidasStore/static/css/main.31dbaba1.chunk.css",
-    "main.js": "/AdidasStore/static/js/main.6979b4ab.chunk.js",
-    "main.js.map": "/AdidasStore/static/js/main.6979b4ab.chunk.js.map",
+    "main.js": "/AdidasStore/static/js/main.3d4a5b66.chunk.js",
+    "main.js.map": "/AdidasStore/static/js/main.3d4a5b66.chunk.js.map",
     "runtime-main.js": "/AdidasStore/static/js/runtime-main.c48372d2.js",
     "runtime-main.js.map": "/AdidasStore/static/js/runtime-main.c48372d2.js.map",
     "static/css/2.de424728.chunk.css": "/AdidasStore/static/css/2.de424728.chunk.css",
     "static/js/2.7f448421.chunk.js": "/AdidasStore/static/js/2.7f448421.chunk.js",
     "static/js/2.7f448421.chunk.js.map": "/AdidasStore/static/js/2.7f448421.chunk.js.map",
     "index.html": "/AdidasStore/index.html",
-    "precache-manifest.4241f67afb7fd51c7956afbe93c6b6d3.js": "/AdidasStore/precache-manifest.4241f67afb7fd51c7956afbe93c6b6d3.js",
+    "precache-manifest.3dc4a3698ada036a4d4b94ea487a4d56.js": "/AdidasStore/precache-manifest.3dc4a3698ada036a4d4b94ea487a4d56.js",
     "service-worker.js": "/AdidasStore/service-worker.js",
     "static/css/2.de424728.chunk.css.map": "/AdidasStore/static/css/2.de424728.chunk.css.map",
     "static/css/main.31dbaba1.chunk.css.map": "/AdidasStore/static/css/main.31dbaba1.chunk.css.map",
@@ -38,6 +38,6 @@
     "static/css/2.de424728.chunk.css",
     "static/js/2.7f448421.chunk.js",
     "static/css/main.31dbaba1.chunk.css",
-    "static/js/main.6979b4ab.chunk.js"
+    "static/js/main.3d4a5b66.chunk.js"
   ]
 }
