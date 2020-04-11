@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import Menu from '../Menu/Menu'
+import Sidebar from '../Sidebar/Sidebar'
+
 
 const Wrapper = styled.nav`
 width: 100vw;
@@ -8,17 +10,21 @@ height: 3.6rem;
 box-sizing: border-box;
 background-color: black;
 @media (max-width: 575px) {
-    height: 0;
+    display: none;
 }
 `
 
+const NavbarBlack = () => {
 
-function NavbarWhite() {
+
     return (
-        <Wrapper>
-            <Menu />
-        </Wrapper>
+        <>
+            <Wrapper>
+                <Menu direction={"row"} color={"white"}/>
+            </Wrapper>
+            <Sidebar />
+        </>
     )
 }
 
-export default NavbarWhite
+export default NavbarBlack

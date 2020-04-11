@@ -26,3 +26,8 @@
         transform: rotate(45deg) translate(-8px,-.3rem);
     }
  
+    /* Filters */
+
+.filter-checkbox__checked {
+    background-color: black!important;
+}

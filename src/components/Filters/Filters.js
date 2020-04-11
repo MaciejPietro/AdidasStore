@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import arrowDown from '../../img/icons/arrowDown.png'
+import checked from '../../img/icons/checked.png'
 import '../../animations/animations.css'
+
 
 
 const filters = [
@@ -9,20 +11,20 @@ const filters = [
         name: "Plec",
         icon: arrowDown,
         type: "dropdown",
-        choices: ["Mezczyzna", "Kobieta", "Dziecko"]
+        choices: ["Mezczyzna", "Kobieta", "Dziecko"],
 
     },
     {
         name: "Rozmiar",
         icon: arrowDown,
         type: "dropdown",
-        choices: ["30-35", "36-40", "41-45"]
+        choices: ["30-35", "36-40", "41-45"],
     },
     {
         name: "Kolor",
         icon: arrowDown,
         type: "dropdown",
-        choices: ["czarny", "bialy", "czerwony", "niebieski", "inne"]
+        choices: ["czarny", "bialy", "czerwony", "niebieski", "inne"],
     },
     {
         name: "Promocje",
@@ -89,7 +91,8 @@ margin-left: -1.05rem;
 flex-direction: column;
 border: 1.4px solid black;
 border-top: none;
-z-index: 2;
+background-color: white;
+z-index: 3;
 `
 
 const Icon = styled.span`
@@ -110,6 +113,7 @@ const Label = styled.label`
     padding: 6px 10px;
     p {
         font-size: 1rem;
+        padding-left: 10px;
     }
     &:first-child {
         margin-top: 1rem;
@@ -121,27 +125,51 @@ width: 24px;
 height: 24px;
 background-color: white;
 border: 2px solid black;
+background-image: url(${({img}) => img});
+background-size: cover;
+transition: .2s;
+background-position: -1px 0px;
 `
 
-function Filters({click}) {
+const AppliedFilters = styled.div`
+width: 90vw;
+height: 2.4rem;
+background-color: white;
+
+`
+const Filter = styled.div`
+width: 7rem;
+height: 1.6rem;
+margin: .4rem 0;
+background-color: lightgrey;
+`
+
+function Filters({click, checkboxClick}) {
 
     return (
-        <Wrapper >
-            {filters.map((filter, i) => (
-                    <Option key={filter.name} onClick={click}>
-                        <p>{filter.name}</p>
-                        <Icon img={filter.icon}></Icon>
-                        <Drop flag={filter.choices}>
-                            {filter.choices.map(option => (
-                                <Label key={option}>
-                                    <Checkbox />
-                                    <p>{option}</p>
-                                </Label>        
-                            ))}
-                        </Drop>
-                    </Option>
-                ))}
-        </Wrapper>
+        <>
+            <Wrapper >
+                {filters.map((filter, i) => (
+                        <Option key={filter.name} onClick={click}>
+                            <p>{filter.name}</p>
+                            <Icon img={filter.icon}></Icon>
+                            <Drop flag={filter.choices}>
+                                {filter.choices.map(option => (
+                                    <Label key={option}>
+                                        <Checkbox onClick={checkboxClick} img={checked} data-option={option}/>
+                                        <p>{option}</p>
+                                    </Label>        
+                                ))}
+                            </Drop>
+                        </Option>
+                    ))}
+            </Wrapper>
+            <AppliedFilters className="mx-auto">
+                   <Filter>
+                    Mezczyzna x
+                    </Filter>                 
+            </AppliedFilters>
+        </>
     )
 }
 

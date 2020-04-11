@@ -5,10 +5,11 @@ import styled from 'styled-components'
 
 const List = styled.ul`
 display: flex;
-flex-direction: row;
+flex-direction: ${({direction}) => direction};
 justify-content: space-between;
 padding: 1rem 30vw;
 list-style: none;
+color: ${({color}) => color};
 @media (max-width: 1200px) {
     padding: 1rem 20vw; 
 }
@@ -18,7 +19,6 @@ list-style: none;
 `
 
 const Item = styled.li`
-color: white;
 letter-spacing: 1.2px;
 span {
     display: block;
@@ -45,9 +45,9 @@ span:nth-child(2)  {
 }
 `
 
-function Menu() {
+function Menu({direction, color}) {
     return (
-            <List>
+            <List direction={direction} color={color}>
                 <Item>Mezczyzni<span /> <span /></Item>
                 <Item>Kobiety <span /> <span /></Item>
                 <Item>Dzieci <span /> <span /></Item>

@@ -6,7 +6,8 @@ import search from '../../img/icons/search.png'
 import favourite from '../../img/icons/favourite.png'
 import cart from '../../img/icons/cart.png'
 import login from '../../img/icons/login.png'
-import { v4 as uuidv4 } from 'uuid';
+import { useDispatch } from 'react-redux'
+import { toggleSidebar } from '../../redux/actions/actions'
 
 const options = [
     {
@@ -31,12 +32,15 @@ const Wrapper = styled.nav`
 width: 100vw;
 height: 10vh;
 box-sizing: border-box;
+z-index: 2;
 padding: 2vh 7vw;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
+background-color: white;
 @media (max-width: 575px) {
     flex-direction: row-reverse;
+    border-bottom: 2px solid black;
 }
 `
 
@@ -178,19 +182,21 @@ justify-content: space-between;
 
 function NavbarWhite({ click }) {
 const [ searchBar, setSearchBar ] = useState(false)
+const dispatch = useDispatch()
+
 
     function toggleSearchBar() {
         setSearchBar(!searchBar)
     }
 
-
     function toggleButton(e) {
         e.currentTarget.classList.toggle('navbar-btn__active');
+        dispatch(toggleSidebar())
     }
 
 
     return (
-        <Wrapper >
+        <Wrapper className="sticky-top">
             <Logo className="d-none d-sm-block" img={logo}></Logo>
 
             <Button onClick={toggleButton} className="d-flex d-sm-none">
