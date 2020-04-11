@@ -1,6 +1,6 @@
 
 
-export const sexFilter = (state = {man: true, woman: true, kid: true}, action) => {
+export const sexFilter = (state = {man: false, woman: false, kid: false}, action) => {
     switch(action.type) {
         case 'FILTER_MAN':
             return state = {...state, man: !state.man}
@@ -13,7 +13,7 @@ export const sexFilter = (state = {man: true, woman: true, kid: true}, action) =
     }
 }
 
-export const sizeFilter = (state = {small: true, medium: true, big: true}, action) => {
+export const sizeFilter = (state = {small: false, medium: false, big: false}, action) => {
     switch(action.type) {
         case 'FILTER_SMALL':
             return state = {...state, small: !state.small}
@@ -27,7 +27,7 @@ export const sizeFilter = (state = {small: true, medium: true, big: true}, actio
 }
 
 
-export const colorFilter = (state = {black: true, white: true, red: true, blue: true, others: true}, action) => {
+export const colorFilter = (state = {black: false, white: false, red: false, blue: false, others: false}, action) => {
     switch(action.type) {
         case 'FILTER_BLACK':
             return state = {...state, black: !state.black}

@@ -30,9 +30,17 @@ function ProductsList({filteredSize}) {
     return (
         <Wrapper className="row">
             {filteredSize.map(product => (
-                    <Product key={product.name} img={product.image} name={product.name} price={product.price} oldPrice={product.oldPrice}/>
+                    <Product 
+                    key={product.name} 
+                    opacity={"1"} 
+                    img={product.image} 
+                    name={product.name} 
+                    price={product.price} 
+                    oldPrice={product.oldPrice}/>
                 ))}
-
+            <Product opacity={"0"}/>
+            <Product opacity={"0"}/>
+            <Product opacity={"0"}/>
         </Wrapper>
     )
 }

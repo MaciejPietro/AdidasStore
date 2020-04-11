@@ -66,23 +66,41 @@ const applyFilter = (e) => {
 }
 
 const filteredSex = products.filter(product => {
-    const { man, woman, kid } = sexFilter
+    let { man, woman, kid } = sexFilter
+    let { small, medium, big } = sizeFilter
+    let { black, white, blue, red, others } = colorFilter
 
-    const opt1 = man === true ? "man" : ""
-    const opt2 = woman === true ? "woman" : ""
-    const opt3 = kid === true ? "kid" : ""
+    man = man === true ? "man" : ""
+    woman = woman === true ? "woman" : ""
+    kid = kid === true ? "kid" : ""
 
-    return product.sex === opt1 || product.sex === opt2 || product.sex === opt3
+    small = small === true ? "small" : ""
+    medium = medium === true ? "medium" : ""
+    big = big === true ? "big" : ""
+
+    black = black === true ? "black" : ""
+    white = white === true ? "white" : ""
+    blue = blue === true ? "blue" : ""
+    red = red === true ? "red" : ""
+    others = others === true ? "others" : ""
+    
+
+
+
+    return product.sex === man || product.sex === woman || product.sex === kid 
+    || product.size === small || product.size === medium || product.size === big
+    || product.color === black || product.color === white || product.color === blue || product.color === red || product.color === others
 })
 
 const filteredSize = filteredSex.filter(product => {
-    const { small, medium, big } = sizeFilter
+//         const { small, medium, big } = sizeFilter
  
-    const opt1 = small === true ? "small" : ""
-    const opt2 = medium === true ? "medium" : ""
-    const opt3 = big === true ? "big" : ""
+//     const opt1 = small === true ? "small" : ""
+//     const opt2 = medium === true ? "medium" : ""
+//     const opt3 = big === true ? "big" : ""
 
-    return product.size === opt1 || product.size === opt2 || product.size === opt3
+//     return product.size === opt1 || product.size === opt2 || product.size === opt3
+return true
 })
 
 

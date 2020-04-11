@@ -6,6 +6,7 @@ import ToCartBtn from '../Buttons/ToCartBtn'
 const Wrapper = styled.div`
 width: 20rem;
 height: 24rem;
+opacity: ${({opacity}) => opacity};
 @media (max-width: 720px) {
     margin: 0 auto;
 }
@@ -45,9 +46,9 @@ p:last-child {
 }
 `
 
-function Product({img, name, price, oldPrice}) {
+function Product({img, name, price, oldPrice, opacity}) {
     return (
-        <Wrapper>
+        <Wrapper opacity={opacity}>
             <Picture img={img}/>
             <Row>Mezczyzni - sport</Row>
             <Row isBig>
