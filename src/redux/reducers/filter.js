@@ -44,3 +44,12 @@ export const colorFilter = (state = {black: false, white: false, red: false, blu
     }
 }
 
+export const sortFilter = (state = {text: "random"}, action) => {
+    switch(action.type) {
+        case 'FILTER_SORT':
+            return {...state, text: action.text}
+        default:
+            return state
+    }
+}
+

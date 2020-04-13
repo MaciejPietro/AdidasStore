@@ -13,9 +13,17 @@ font-size: 4rem;
 font-family: 'Aga';
 line-height: 4rem;
 letter-spacing: 3.6px;
-word-break: break-word;
+word-break: keep-all;
 display: flex;
 text-align: center;
+@media (max-width: 420px) {
+    font-size: 3rem;
+    line-height: 3rem;
+}
+@media (max-width: 320px) {
+    font-size: 2rem;
+    line-height: 2.4rem;
+}
 `
 
 function Heading({text, textBold}) {

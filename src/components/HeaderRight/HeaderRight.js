@@ -3,22 +3,30 @@ import styled from 'styled-components'
 import Logo from '../../img/icons/logos.png' 
 import Heading from '../Heading/Heading'
 
-const Wrapper = styled.nav`
+const Wrapper = styled.div`
 padding-top: 3%;
-padding-right: 6vw;
+@media (max-width: 767px) {
+    padding: 0 10vw;
+    margin-bottom: 10vh;
+}
 `
 const Logos = styled.div`
-width: 80%;
+width: 70%;
 height: 20%;
 background-image: url(${({img}) => img});
-background-size:cover;
+background-size:contain;
+background-repeat: no-repeat;
+background-position: 3vw;
+@media (max-width: 767px) {
+    width:30%;
+}
 `
 
 
 function HeaderRight() {
     return (
-        <Wrapper className="col-md-5 col-12">
-            <Logos className="m-auto" img={Logo}></Logos>
+        <Wrapper className="col-md-5 col-12 order-1 order-md-2">
+            <Logos className="mx-auto" img={Logo}></Logos>
             <Heading text={'Nieoficjalny, niedzialajacy'} textBold={"Sklep Adidas"}/>         
         </Wrapper>
     )

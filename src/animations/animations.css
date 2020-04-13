@@ -31,3 +31,11 @@
 .filter-checkbox__checked {
     background-color: black!important;
 }
+
+.filter-option__active {
+border: 1.4px solid black!important;
+}
+
+.filter-sortText__active::before{
+    opacity: 1!important;
+}

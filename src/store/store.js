@@ -28,7 +28,7 @@ export const products = [
         color: "black",
         price: 329,
         oldPrice: 440,
-        special: "promotion",
+        promotion: "promotion",
         inCart: false,
         inFavourite: false
     },
@@ -42,7 +42,7 @@ export const products = [
         color: "black",
         price: 300,
         oldPrice: "",
-        special: "new",
+        filterNew: "filterNew",
         inCart: false,
         inFavourite: false
     },
@@ -56,7 +56,6 @@ export const products = [
         color: "black",
         price: 210,
         oldPrice: 300,
-        special: "",
         inCart: false,
         inFavourite: false
     },
@@ -70,7 +69,6 @@ export const products = [
         color: "black",
         price: "329",
         oldPrice: "",
-        special: "",
         inCart: false,
         inFavourite: false
     },
@@ -84,7 +82,7 @@ export const products = [
         color: "white",
         price: 150,
         oldPrice: 200,
-        special: "new",
+        filterNew: "filterNew",
         inCart: false,
         inFavourite: false
     },
@@ -98,7 +96,6 @@ export const products = [
         color: "white",
         price: 500,
         oldPrice: "",
-        special: "",
         inCart: false,
         inFavourite: false
     },
@@ -112,7 +109,6 @@ export const products = [
         color: "red",
         price: 220,
         oldPrice: 240,
-        special: "",
         inCart: false,
         inFavourite: false
     },
@@ -126,7 +122,6 @@ export const products = [
         color: "blue",
         price: 329,
         oldPrice: "",
-        special: "",
         inCart: false,
         inFavourite: false
     },
@@ -140,7 +135,7 @@ export const products = [
         color: "blue",
         price: 400,
         oldPrice: "",
-        special: "new",
+        filterNew: "filterNew",
         inCart: false,
         inFavourite: false
     },
@@ -154,7 +149,7 @@ export const products = [
         color: "red",
         price: 400,
         oldPrice: 600,
-        special: "promotion",
+        promotion: "promotion",
         inCart: false,
         inFavourite: false
     },
@@ -168,7 +163,7 @@ export const products = [
         color: "red",
         price: 180,
         oldPrice: "",
-        special: "new",
+        filterNew: "filterNew",
         inCart: false,
         inFavourite: false
     },
@@ -182,7 +177,7 @@ export const products = [
         color: "black",
         price: 120,
         oldPrice: 160,
-        special: "promotion",
+        promotion: "promotion",
         inCart: false,
         inFavourite: false
     },
@@ -196,7 +191,6 @@ export const products = [
         color: "blue",
         price: 290,
         oldPrice: 310,
-        special: "",
         inCart: false,
         inFavourite: false
     },
@@ -210,7 +204,6 @@ export const products = [
         color: "blue",
         price: 230,
         oldPrice: "",
-        special: "",
         inCart: false,
         inFavourite: false
     },
@@ -224,7 +217,7 @@ export const products = [
         color: "red",
         price: 380,
         oldPrice: "",
-        special: "new",
+        filterNew: "filterNew",
         inCart: false,
         inFavourite: false
     },
@@ -238,7 +231,7 @@ export const products = [
         color: "black",
         price: 920,
         oldPrice: 1080,
-        special: "new",
+        special: "filterNew",
         inCart: false,
         inFavourite: false
     },

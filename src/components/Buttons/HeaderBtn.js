@@ -31,6 +31,34 @@ p{
         margin-left: 4.1rem;
     }  
  }
+@media (max-width: 576px) {
+    width: 12rem;
+    &:after {
+        width: 12rem;
+        margin-left: -5.6rem;
+    }
+    span {
+        margin-left: 3rem;
+    }
+    &:hover {
+        &:after {
+            margin-top: -3.6rem;
+            margin-left: -6rem;
+        }
+        span {
+            margin-left: 3.5rem;
+        }
+    }
+}
+@media (max-width: 420px) {
+    margin-top: 0;
+    transform: translate(-30vw);
+    width: 60vw;  
+    &:after {
+        width: 60vw;
+        left: 23vw;
+    }
+}
 `
 const Icon = styled.span`
 width: 2rem;
@@ -45,13 +73,13 @@ margin-left: 3.8rem;
 transition: .6s;
 `
 
-function Button() {
+function HeaderBtn() {
     return (
-        <Wrapper >
+        <Wrapper className="mx-auto">
             <p className="mr-5 mt-2">Zobacz kolekcje</p>
             <Icon img={arrowRight} />
         </Wrapper>
     )
 }
 
-export default Button
+export default HeaderBtn

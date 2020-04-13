@@ -70,3 +70,14 @@ export const filterOthers = () => {
     }
 }
 
+export const filterSort = text => {
+    return {
+        type: 'FILTER_SORT',
+        text
+    }
+}
+
+
+
+
+

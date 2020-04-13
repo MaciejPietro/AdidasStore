@@ -12,6 +12,7 @@ flex-direction: row;
 justify-content: space-between;
 flex-wrap: wrap;
 flex: 1;
+margin-top: 1rem;
 @media (max-width: 1070px) {
     padding: 0 10vw;
 }
@@ -23,13 +24,15 @@ flex: 1;
 }
 `
 
-function ProductsList({filteredSize}) {
+function ProductsList({filteredStore}) {
 
+useEffect(() => {
 
+}, [filteredStore])
   
     return (
         <Wrapper className="row">
-            {filteredSize.map(product => (
+            {filteredStore.map(product => (
                     <Product 
                     key={product.name} 
                     opacity={"1"} 
