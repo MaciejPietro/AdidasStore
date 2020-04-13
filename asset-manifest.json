@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/AdidasStore/static/css/main.31dbaba1.chunk.css",
-    "main.js": "/AdidasStore/static/js/main.3d4a5b66.chunk.js",
-    "main.js.map": "/AdidasStore/static/js/main.3d4a5b66.chunk.js.map",
+    "main.css": "/AdidasStore/static/css/main.72cb7083.chunk.css",
+    "main.js": "/AdidasStore/static/js/main.140403fa.chunk.js",
+    "main.js.map": "/AdidasStore/static/js/main.140403fa.chunk.js.map",
     "runtime-main.js": "/AdidasStore/static/js/runtime-main.c48372d2.js",
     "runtime-main.js.map": "/AdidasStore/static/js/runtime-main.c48372d2.js.map",
     "static/css/2.de424728.chunk.css": "/AdidasStore/static/css/2.de424728.chunk.css",
     "static/js/2.7f448421.chunk.js": "/AdidasStore/static/js/2.7f448421.chunk.js",
     "static/js/2.7f448421.chunk.js.map": "/AdidasStore/static/js/2.7f448421.chunk.js.map",
     "index.html": "/AdidasStore/index.html",
-    "precache-manifest.3dc4a3698ada036a4d4b94ea487a4d56.js": "/AdidasStore/precache-manifest.3dc4a3698ada036a4d4b94ea487a4d56.js",
+    "precache-manifest.34829a8618dbe4b1feb240fe5d7539d4.js": "/AdidasStore/precache-manifest.34829a8618dbe4b1feb240fe5d7539d4.js",
     "service-worker.js": "/AdidasStore/service-worker.js",
     "static/css/2.de424728.chunk.css.map": "/AdidasStore/static/css/2.de424728.chunk.css.map",
-    "static/css/main.31dbaba1.chunk.css.map": "/AdidasStore/static/css/main.31dbaba1.chunk.css.map",
+    "static/css/main.72cb7083.chunk.css.map": "/AdidasStore/static/css/main.72cb7083.chunk.css.map",
     "static/js/2.7f448421.chunk.js.LICENSE.txt": "/AdidasStore/static/js/2.7f448421.chunk.js.LICENSE.txt",
     "static/media/Paul.ttf": "/AdidasStore/static/media/Paul.aa80cfa2.ttf",
     "static/media/cart.png": "/AdidasStore/static/media/cart.aa9925ad.png",
@@ -37,7 +37,7 @@
     "static/js/runtime-main.c48372d2.js",
     "static/css/2.de424728.chunk.css",
     "static/js/2.7f448421.chunk.js",
-    "static/css/main.31dbaba1.chunk.css",
-    "static/js/main.3d4a5b66.chunk.js"
+    "static/css/main.72cb7083.chunk.css",
+    "static/js/main.140403fa.chunk.js"
   ]
 }
