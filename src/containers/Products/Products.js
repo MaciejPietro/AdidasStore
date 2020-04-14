@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react'
-import reducers from '../../redux/reducers/reducers'
 import styled from 'styled-components'
 import Heading from '../../components/Heading/Heading'
 import Filters from '../../components/Filters/Filters'
@@ -13,7 +12,6 @@ filterBlack, filterWhite, filterRed, filterBlue, filterOthers,
 filterSort
 } from '../../redux/actions/actions'
 
-// import applyFilter from '../../redux/reducers/applyFilter'
 
 const Wrapper = styled.section`
 width: 100vw;
@@ -31,9 +29,6 @@ const sizeFilter = useSelector(state => state.sizeFilter)
 const colorFilter = useSelector(state => state.colorFilter)
 const sortFilter = useSelector(state => state.sortFilter)
 const sortText = useRef()
-
-
-// const sortFilter = useSelector(state => state.colorFilter)
 
 const applyFilter = (e) => {
 
@@ -130,41 +125,33 @@ const sortProducts = filterColor.sort((a , b) => {
                 return parseFloat(a.price) - parseFloat(b.price);
         case "priceDown":
                 return parseFloat(b.price) - parseFloat(a.price);
-        // case "sizeUp":
-        //         return parseFloat(a.price) - parseFloat(b.price);
-        // case "sizedown":
-        //         return parseFloat(a.price) - parseFloat(b.price);
+        case "sizeUp":
+                return parseFloat(a.sizes[0]) - parseFloat(b.sizes[0]);
+        case "sizedown":
+                return parseFloat(b.sizes[0]) - parseFloat(a.sizes[0]);
         default:
       }
 
 })
 
 const sortClick = (e) => {
-        const cos = document.querySelectorAll('.filter-sortText')
-        console.log(cos)
-        cos.forEach(costam => {
-                costam.classList.remove('filter-sortText__active')
+        const currentSortOption = document.querySelectorAll('.filter-sortText')
+        e.target.classList.add('filter-sortText__active')
+
+        currentSortOption.forEach(sortOption => {
+                sortOption.classList.remove('filter-sortText__active')
         })
   
-        e.target.classList.add('filter-sortText__active')
 
         switch (e.target.innerText) {
                 case "Cena rosnaco":
-                        dispatch(filterSort("priceUp"))
-                        console.log("priceUp")
-                        break;
+                        return dispatch(filterSort("priceUp"))
                 case "Cena malejaco":
-                        dispatch(filterSort("priceDown"))
-                        console.log("priceDown")
-                        break;
+                        return dispatch(filterSort("priceDown"))
                 case "Rozmiar rosnaco":
-                        dispatch(filterSort("sizeUp"))
-                        console.log("sizeUp")
-                        break;
+                        return dispatch(filterSort("sizeUp"))
                 case "Rozmiar malejaco":
-                        dispatch(filterSort("sizeDown"))
-                        console.log("sizeDown")
-                        break;
+                        return dispatch(filterSort("sizeDown"))
                 default:
         }
       
@@ -174,6 +161,7 @@ const toggleCheckbox = (e) => {
     e.target.classList.toggle('filter-checkbox__checked')
     applyFilter(e)
 }
+
 
 useEffect(() => {
 

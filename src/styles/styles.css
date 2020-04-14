@@ -39,3 +39,9 @@ border: 1.4px solid black!important;
 .filter-sortText__active::before{
     opacity: 1!important;
 }
+
+/* Product */
+
+.product-hearth__active::before {
+   
+}

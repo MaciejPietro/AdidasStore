@@ -1,31 +1,16 @@
-import React, { useState } from 'react'
-import '../../animations/animations.css'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import logo from '../../img/icons/logo.png'
 import search from '../../img/icons/search.png'
 import favourite from '../../img/icons/favourite.png'
 import cart from '../../img/icons/cart.png'
 import login from '../../img/icons/login.png'
-import { useDispatch } from 'react-redux'
+import { products } from  '../../store/store'
+import { useDispatch, useSelector } from 'react-redux'
 import { toggleSidebar } from '../../redux/actions/actions'
+import { addFavourite } from '../../redux/actions/actions'
+import { Link } from "react-router-dom";
 
-const options = [
-    {
-      name: "Ulubione",
-      icon: favourite,
-      items: 2,
-
-    },
-    {
-      name: "Koszyk",
-      icon: cart,
-      items: 1
-    },
-    {
-      name: "Zaloguj",
-      icon: login
-    }
-  ]
   
 
 const Wrapper = styled.nav`
@@ -66,11 +51,12 @@ div {
 }
 `
 
-const Option = styled.div`
+const Option = styled(Link)`
 display: flex;
 flex-direction: row;
 min-width: 8rem;
 height: 6vh;
+cursor: pointer;
  p {
      color: black;
      font-size: 1rem;
@@ -181,8 +167,29 @@ justify-content: space-between;
 
 
 function NavbarWhite({ click }) {
-const [ searchBar, setSearchBar ] = useState(false)
 const dispatch = useDispatch()
+const favour = useSelector(state => state.changeFavourite);
+const [ searchBar, setSearchBar ] = useState(false)
+
+const options = [
+    {
+      name: "Ulubione",
+      icon: favourite,
+      items: favour.arr.length,
+      to: "/favourites"
+
+    },
+    {
+      name: "Koszyk",
+      icon: cart,
+      items: 1,
+      to: "/cart"
+    },
+    {
+      name: "Zaloguj",
+      icon: login
+    }
+  ]
 
 
     function toggleSearchBar() {
@@ -194,6 +201,7 @@ const dispatch = useDispatch()
         dispatch(toggleSidebar())
     }
 
+    
 
     return (
         <Wrapper className="sticky-top">
@@ -211,10 +219,10 @@ const dispatch = useDispatch()
 
             <Options className="col-xl-4 col-5">
                 {options.map(option => (
-                    <Option key={option.name}>
-                        <Icon img={option.icon}/>
-                        <div>{option.items}</div>
-                        <p>{option.name}</p>
+                    <Option key={option.name} to={option.to}>                   
+                            <Icon img={option.icon}/>
+                            <div>{option.items}</div>
+                            <p>{option.name}</p>     
                     </Option>
                 ))}
             </Options>

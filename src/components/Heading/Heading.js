@@ -12,7 +12,7 @@ color: black;
 font-size: 4rem;
 font-family: 'Aga';
 line-height: 4rem;
-letter-spacing: 3.6px;
+letter-spacing: ${({letterSpacing}) => letterSpacing};
 word-break: keep-all;
 display: flex;
 text-align: center;
@@ -26,10 +26,10 @@ text-align: center;
 }
 `
 
-function Heading({text, textBold}) {
+function Heading({text, textBold, letterSpacing}) {
     return (
         <Wrapper>
-            <Header className="mt-4">
+            <Header className="mt-4" letterSpacing={letterSpacing}>
                 {text}
             </Header>
             <Header>

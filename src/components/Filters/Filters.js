@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import arrowDown from '../../img/icons/arrowDown.png'
 import checked from '../../img/icons/checked.png'
-import '../../animations/animations.css'
 
 
 

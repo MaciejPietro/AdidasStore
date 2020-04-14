@@ -19,6 +19,7 @@ import shoes16 from '../img/shoes/shoes16.jpg'
 
 export const products = [
     {
+        id: 0,
         name: "Tensor flow",
         image: shoes1,
         sex: "man",
@@ -33,6 +34,7 @@ export const products = [
         inFavourite: false
     },
     {
+        id: 1,
         name: "Ziger Zoe",
         image: shoes2,
         sex: "man",
@@ -47,6 +49,7 @@ export const products = [
         inFavourite: false
     },
     {
+        id: 2,
         name: "Magnum Ignotum",
         image: shoes3,
         sex: "woman",
@@ -60,6 +63,7 @@ export const products = [
         inFavourite: false
     },
     {
+        id: 3,
         name: "Zoe Lincoln",
         image: shoes4,
         sex: "woman",
@@ -73,6 +77,7 @@ export const products = [
         inFavourite: false
     },
     {
+        id: 4,
         name: "Gumpy Liban",
         image: shoes5,
         sex: "woman",
@@ -87,6 +92,7 @@ export const products = [
         inFavourite: false
     },
     {
+        id: 5,
         name: "Sensor Plus",
         image: shoes6,
         sex: "man",
@@ -100,6 +106,7 @@ export const products = [
         inFavourite: false
     },
     {
+        id: 6,
         name: "Somatic Agony",
         image: shoes7,
         sex: "man",
@@ -113,6 +120,7 @@ export const products = [
         inFavourite: false
     },
     {
+        id: 7,
         name: "Elevator",
         image: shoes8,
         sex: "man",
@@ -126,6 +134,7 @@ export const products = [
         inFavourite: false
     },
     {
+        id: 8,
         name: "Bumpy One",
         image: shoes9,
         sex: "man",
@@ -140,6 +149,7 @@ export const products = [
         inFavourite: false
     },
     {
+        id: 9,
         name: "Timoty Joe",
         image: shoes10,
         sex: "woman",
@@ -154,6 +164,7 @@ export const products = [
         inFavourite: false
     },
     {
+        id: 10,
         name: "Tenerif Speed",
         image: shoes11,
         sex: "woman",
@@ -168,6 +179,7 @@ export const products = [
         inFavourite: false
     },
     {
+        id: 11,
         name: "Cay Fakture",
         image: shoes12,
         sex: "kid",
@@ -182,6 +194,7 @@ export const products = [
         inFavourite: false
     },
     {
+        id: 12,
         name: "Momentum",
         image: shoes13,
         sex: "kid",
@@ -195,6 +208,7 @@ export const products = [
         inFavourite: false
     },
     {
+        id: 13,
         name: "Tastory Mit",
         image: shoes14,
         sex: "kid",
@@ -208,6 +222,7 @@ export const products = [
         inFavourite: false
     },
     {
+        id: 14,
         name: "Timbaland Expo",
         image: shoes15,
         sex: "kid",
@@ -222,6 +237,7 @@ export const products = [
         inFavourite: false
     },
     {
+        id: 15,
         name: "Tanganic",
         image: shoes16,
         sex: "man",

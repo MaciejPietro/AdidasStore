@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
-import { products } from '../../store/store'
 import Product from '../Product/Product'
-import { useSelector } from 'react-redux'
+
 
 const Wrapper = styled.div`
 width: 90vw;
@@ -24,7 +23,7 @@ margin-top: 1rem;
 }
 `
 
-function ProductsList({filteredStore}) {
+function ProductsList({filteredStore, hearthClick}) {
 
 useEffect(() => {
 
@@ -39,11 +38,15 @@ useEffect(() => {
                     img={product.image} 
                     name={product.name} 
                     price={product.price} 
-                    oldPrice={product.oldPrice}/>
+                    oldPrice={product.oldPrice}
+                    category={product.sex}
+                    id={product.id}
+                    inFavourite={product.inFavourite}
+                    />
                 ))}
-            <Product opacity={"0"}/>
-            <Product opacity={"0"}/>
-            <Product opacity={"0"}/>
+            <Product id={-1} opacity={"0"}/>
+            <Product id={-1}opacity={"0"}/>
+            <Product id={-1} opacity={"0"}/>
         </Wrapper>
     )
 }

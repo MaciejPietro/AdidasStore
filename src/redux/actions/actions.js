@@ -77,6 +77,21 @@ export const filterSort = text => {
     }
 }
 
+export const addFavourite = item => {
+    return {
+        type: 'ADD_FAVOURITE',
+        item
+    }
+}
+
+export const removeFavourite = item => {
+    return {
+        type: 'REMOVE_FAVOURITE',
+        item
+    }
+}
+
+
 
 
 

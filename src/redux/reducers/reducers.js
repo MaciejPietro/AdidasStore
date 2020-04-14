@@ -1,5 +1,6 @@
 import toggleSidebar from './toggleSidebar'
 import { sexFilter, sizeFilter, colorFilter, sortFilter } from './filter'
+import { changeFavourite } from './inFavourite'
 import { combineReducers } from 'redux';
 
 const reducers = combineReducers({
@@ -7,7 +8,8 @@ const reducers = combineReducers({
     sexFilter,
     sizeFilter,
     colorFilter,
-    sortFilter
+    sortFilter,
+    changeFavourite
 })
 
 export default reducers

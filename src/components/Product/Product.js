@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
-import img from '../../img/shoes/shoes1.jpg'
+import hearth from '../../img/icons/favourite.png'
+import hearthBlack from '../../img/icons/favouriteBlack.png'
+import { products } from '../../store/store'
+import { useDispatch, useSelector } from 'react-redux'
 import ToCartBtn from '../Buttons/ToCartBtn'
+import { addFavourite, removeFavourite } from '../../redux/actions/actions'
 
 const Wrapper = styled.div`
 width: 20rem;
@@ -19,6 +23,20 @@ height: 76%;
 background-image: url(${({img}) => img});
 background-size: contain;
 `
+
+const HearthIcon = styled.span`
+    content: '';
+    display: block;
+    position: relative;
+    width: 36px;
+    height: 36px;
+    left: -12px;
+    top: 12px;
+    margin: 0 0 0 auto;
+    background-image: url(${({hearth}) => hearth});
+    background-size: contain;
+`
+
 const Row = styled.div`
 width: 100%;
 height: ${({isBig}) => isBig ? "10%" : "7%"};
@@ -46,11 +64,35 @@ p:last-child {
 }
 `
 
-function Product({img, name, price, oldPrice, opacity}) {
+function Product({img, name, price, oldPrice, opacity, category, id}) {
+const dispatch = useDispatch()
+const favour = useSelector(state => state.changeFavourite);
+
+    const displayCategory = () => {
+        if(category === "man") {
+            return "Meskie"
+        } else if (category === "woman") {
+            return "Damskie"
+        } else if(category === "kid") {
+            return "Dzieciece"
+        }
+    }
+
+    const addItemToFavourite = (e) => {
+
+        if(favour.arr.includes(e.currentTarget.id)) {
+            dispatch(removeFavourite(e.currentTarget.id))
+        } else if(!favour.arr.includes(e.currentTarget.id)) {
+            dispatch(addFavourite(e.currentTarget.id))
+        }
+    }
+
     return (
         <Wrapper opacity={opacity}>
-            <Picture img={img}/>
-            <Row>Mezczyzni - sport</Row>
+            <Picture className="product-hearth__active" img={img}>
+                <HearthIcon id={id} hearth={favour.arr.includes(id.toString()) ? hearthBlack : hearth} onClick={addItemToFavourite}></HearthIcon>
+            </Picture>
+            <Row>{displayCategory()}</Row>
             <Row isBig>
                 <h5>{name}</h5>
                 <ToCartBtn />
