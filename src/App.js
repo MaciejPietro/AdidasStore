@@ -36,13 +36,13 @@ function App() {
       <NavbarWhite/>
       <NavbarBlack />
       <Switch>
-          <Route path="/home">
+          <Route path="/AdidasStore/home">
             <>
               <Home />
               <Products />
             </>
           </Route>
-          <Route path="/favourites">
+          <Route path="/AdidasStore/favourites">
             <Favourites />
           </Route>
       </Switch>
