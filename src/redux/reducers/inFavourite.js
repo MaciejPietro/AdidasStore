@@ -1,5 +1,5 @@
 const initialFavouriteState = {
-    arr:[]
+    arr:["5"]
 }
 
 

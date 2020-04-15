@@ -29,13 +29,14 @@ background-color: white;
 }
 `
 
-const Logo = styled.span`
+const Logo = styled(Link)`
 display: block;
-width: 16rem;
-height: 6vh;
+width: 6rem;
+height: 4rem;
 background-image: url(${({img}) => img});
 background-size: contain;
 background-repeat: no-repeat;
+cursor: pointer;
 `
 
 const Options = styled.div`
@@ -187,7 +188,8 @@ const options = [
     },
     {
       name: "Zaloguj",
-      icon: login
+      icon: login,
+      to: "/login"
     }
   ]
 
@@ -205,7 +207,7 @@ const options = [
 
     return (
         <Wrapper className="sticky-top">
-            <Logo className="d-none d-sm-block" img={logo}></Logo>
+            <Logo className="d-none d-sm-block" img={logo} to="/"></Logo>
 
             <Button onClick={toggleButton} className="d-flex d-sm-none">
                 <span />

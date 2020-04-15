@@ -1,12 +1,15 @@
-import React from 'react'
-import Heading from '../../components/Heading/Heading'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
-import shoes from '../../img/shoes/shoes2.jpg'
+import { useDispatch, useSelector } from 'react-redux'
+import { products }from '../../store/store'
+import Heading from '../../components/Heading/Heading'
+import { FavouritesDescription as Description } from '../../components/FavouritesDescription/FavouritesDescription'
+import { FavouritesInteractions } from '../../components/FavouritesInteractions/FavouritesInteractions'
+import {  removeFavourite } from '../../redux/actions/actions'
 
 const Wrapper = styled.section`
 width: 60vw;
 margin: 3rem 20vw;
-border: 2px solid pink;
 `
 
 const List = styled.ul`
@@ -23,71 +26,40 @@ list-style: none;
 margin: 0;
 `
 
-const Description = styled.div`
-height: 13rem;
-border: 2px solid darkcyan;
-padding: 0;
-display: flex;
-flex-direction: row;
-padding: 1.5rem 0 0 0;
-div {
-    margin-left: .8rem;
-}
-h5 {
-    font-size: 1.6rem;
-}
-h6 {
-    font-size: 1rem;
-    font-weight: 300;
-    letter-spacing: .4px;
-    margin-top: .8rem;
-}
-button {
-    margin-top: .8rem;
-    border: none;
-    background-color: white;
-    cursor: pointer;
-}
-`
 
-const Image = styled.span`
-display: block;
-height: 10rem;
-width: 24%;
-background-image: url(${({shoes}) => shoes});
-background-size: cover;
-`
-
-
-
-const Interactions = styled.div`
-height: 100%;
-border: 2px solid red;
-`
 
 
 function Favourites() {
+    const dispatch = useDispatch()
+    const favour = useSelector(state => state.changeFavourite);
+    
+   
+
+    const favouritesProducts = products.filter(product => {
+        if(favour.arr.includes(product.id.toString())) {
+            return product
+        }
+    })
+
+    const deleteClick = (id) => {
+        dispatch(removeFavourite(id))
+    }
+ 
+    useEffect(() => {
+
+    }, [])
+
+
     return (
         <Wrapper>
             <Heading text="Ulubione" letterSpacing="4px" />
             <List>
-                <Item className="row">
-                    <Description className="col-8">
-                        <Image shoes={shoes}/>
-                        <div>
-                            <h5>Tensor Flow</h5>
-                            <h6>Kolor:Cloud White / Cloud White / Crystal White</h6>
-                            <button>Usun</button>
-                        </div>
-       
-                        
-                    </Description>
-                    <Interactions className="col-4">
-
-                    </Interactions>
-
-                </Item>
-
+                {favouritesProducts.map(product => (
+                    <Item key={product.name} className="row">
+                            <Description deleteClick={deleteClick} id={product.id} img={product.image} name={product.name}/>
+                            <FavouritesInteractions id={product.id} colors={product.colors} sizes={product.sizes}/>
+                    </Item>
+                ))}
             </List>
         </Wrapper>
     )
