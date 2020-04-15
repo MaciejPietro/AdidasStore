@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/AdidasStore/static/css/main.aeec6b08.chunk.css",
-    "main.js": "/AdidasStore/static/js/main.af4b40e1.chunk.js",
-    "main.js.map": "/AdidasStore/static/js/main.af4b40e1.chunk.js.map",
+    "main.js": "/AdidasStore/static/js/main.14d5415b.chunk.js",
+    "main.js.map": "/AdidasStore/static/js/main.14d5415b.chunk.js.map",
     "runtime-main.js": "/AdidasStore/static/js/runtime-main.c48372d2.js",
     "runtime-main.js.map": "/AdidasStore/static/js/runtime-main.c48372d2.js.map",
     "static/css/2.de424728.chunk.css": "/AdidasStore/static/css/2.de424728.chunk.css",
-    "static/js/2.6020ffbe.chunk.js": "/AdidasStore/static/js/2.6020ffbe.chunk.js",
-    "static/js/2.6020ffbe.chunk.js.map": "/AdidasStore/static/js/2.6020ffbe.chunk.js.map",
+    "static/js/2.2bcd3e5f.chunk.js": "/AdidasStore/static/js/2.2bcd3e5f.chunk.js",
+    "static/js/2.2bcd3e5f.chunk.js.map": "/AdidasStore/static/js/2.2bcd3e5f.chunk.js.map",
     "index.html": "/AdidasStore/index.html",
-    "precache-manifest.0bcf49c0b86fc6c4fa8eff575660765b.js": "/AdidasStore/precache-manifest.0bcf49c0b86fc6c4fa8eff575660765b.js",
+    "precache-manifest.b4be70db49d3b689f6f2ca04900bbb88.js": "/AdidasStore/precache-manifest.b4be70db49d3b689f6f2ca04900bbb88.js",
     "service-worker.js": "/AdidasStore/service-worker.js",
     "static/css/2.de424728.chunk.css.map": "/AdidasStore/static/css/2.de424728.chunk.css.map",
     "static/css/main.aeec6b08.chunk.css.map": "/AdidasStore/static/css/main.aeec6b08.chunk.css.map",
-    "static/js/2.6020ffbe.chunk.js.LICENSE.txt": "/AdidasStore/static/js/2.6020ffbe.chunk.js.LICENSE.txt",
+    "static/js/2.2bcd3e5f.chunk.js.LICENSE.txt": "/AdidasStore/static/js/2.2bcd3e5f.chunk.js.LICENSE.txt",
     "static/media/Paul.ttf": "/AdidasStore/static/media/Paul.aa80cfa2.ttf",
     "static/media/cart.png": "/AdidasStore/static/media/cart.aa9925ad.png",
     "static/media/checked.png": "/AdidasStore/static/media/checked.c97af4bf.png",
@@ -37,8 +37,8 @@
   "entrypoints": [
     "static/js/runtime-main.c48372d2.js",
     "static/css/2.de424728.chunk.css",
-    "static/js/2.6020ffbe.chunk.js",
+    "static/js/2.2bcd3e5f.chunk.js",
     "static/css/main.aeec6b08.chunk.css",
-    "static/js/main.af4b40e1.chunk.js"
+    "static/js/main.14d5415b.chunk.js"
   ]
 }
