@@ -45,3 +45,11 @@ border: 1.4px solid black!important;
 .product-hearth__active::before {
    
 }
+
+/* Favourites */
+
+.favouriteColors-color__default {
+    width: 2rem;
+    height: 2rem;
+}
+

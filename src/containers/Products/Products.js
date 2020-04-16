@@ -130,19 +130,19 @@ const sortProducts = filterColor.sort((a , b) => {
         case "sizedown":
                 return parseFloat(b.sizes[0]) - parseFloat(a.sizes[0]);
         default:
+                return filterColor;
       }
 
 })
 
 const sortClick = (e) => {
         const currentSortOption = document.querySelectorAll('.filter-sortText')
+        
         e.target.classList.add('filter-sortText__active')
-
         currentSortOption.forEach(sortOption => {
                 sortOption.classList.remove('filter-sortText__active')
         })
   
-
         switch (e.target.innerText) {
                 case "Cena rosnaco":
                         return dispatch(filterSort("priceUp"))
@@ -153,8 +153,7 @@ const sortClick = (e) => {
                 case "Rozmiar malejaco":
                         return dispatch(filterSort("sizeDown"))
                 default:
-        }
-      
+        }     
 }
 
 const toggleCheckbox = (e) => {
@@ -164,8 +163,8 @@ const toggleCheckbox = (e) => {
 
 
 useEffect(() => {
-
-}, [])
+        dispatch(filterSort("none"))
+}, [dispatch])
  
  return (
         <Wrapper>

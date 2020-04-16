@@ -23,7 +23,7 @@ padding: 0;
 const Item = styled.li`
 height: 13rem;
 list-style: none;
-margin: 0;
+margin: 1.2rem 0;
 `
 
 
@@ -36,9 +36,8 @@ function Favourites() {
    
 
     const favouritesProducts = products.filter(product => {
-        if(favour.arr.includes(product.id.toString())) {
-            return product
-        }
+        const item = favour.arr.includes(product.id.toString()) ? product : null
+        return item
     })
 
     const deleteClick = (id) => {
@@ -56,8 +55,15 @@ function Favourites() {
             <List>
                 {favouritesProducts.map(product => (
                     <Item key={product.name} className="row">
-                            <Description deleteClick={deleteClick} id={product.id} img={product.image} name={product.name}/>
-                            <FavouritesInteractions id={product.id} colors={product.colors} sizes={product.sizes}/>
+                            <Description 
+                                deleteClick={deleteClick} 
+                                id={product.id} 
+                                img={product.image} 
+                                name={product.name}/>                            
+                            <FavouritesInteractions 
+                                id={product.id} 
+                                colors={product.colors} 
+                                sizes={product.sizes}/>
                     </Item>
                 ))}
             </List>

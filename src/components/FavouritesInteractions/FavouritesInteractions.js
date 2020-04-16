@@ -16,24 +16,41 @@ p {
 `
 
 
-export function FavouritesInteractions({sizes, colors}) {
-    const { selectedColor, setSelectedColor} = useState("coors")
+export function FavouritesInteractions({sizes, colors, id}) {
+    const [ selectedColor, setSelectedColor ] = useState(colors[0])
 
+    const setFormChoices = async (e) => {
+        const color = e.currentTarget.getAttribute("color")
+        setSelectedColor(color)
+        console.log("now, selected color is", selectedColor)
+    }
+
+    const addColorStyle = (e) => {
+        const favouriteColors = document.querySelectorAll(`.favouriteColors-${id}`)
+
+        favouriteColors.forEach(color => {
+            color.style.transform = "scale(1)"
+        })
+        e.target.style.transform = "scale(1.35)"
+    }
 
     const selectColor = (e) => {
-        // console.log(e.target.getAttribute("color"))
-        setSelectedColor(e.target.getAttribute("color"))
+        addColorStyle(e)
+        // setFormChoices(e)
     }
 
     useEffect(() => {
-        console.log(selectedColor)
-    }, [selectColor])
+
+    }, [])
 
     return (
         <Interactions className="col-md-4 col-12 row">
-            <p className="col-12 m-0">W magazynie</p>
-
-            <FormColors colors={colors} selectColor={selectColor} />
+            <FormColors 
+                colors={colors} 
+                selectColor={selectColor}
+                setColor={setFormChoices}
+                selectedColor={selectedColor}
+                id={id}/>
             <FormSize sizes={sizes}/>
             <FormQuantity />
             <ToCartBtnLarge />

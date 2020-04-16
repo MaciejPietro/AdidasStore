@@ -1,16 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import hearth from '../../img/icons/favourite.png'
 import hearthBlack from '../../img/icons/favouriteBlack.png'
-import { products } from '../../store/store'
+import arrowRight from '../../img/icons/arrowRight.png'
 import { useDispatch, useSelector } from 'react-redux'
 import ToCartBtn from '../Buttons/ToCartBtn'
 import { addFavourite, removeFavourite } from '../../redux/actions/actions'
+import { Link } from "react-router-dom";
 
 const Wrapper = styled.div`
 width: 20rem;
 height: 24rem;
 opacity: ${({opacity}) => opacity};
+margin-bottom: 1.4rem;
 @media (max-width: 720px) {
     margin: 0 auto;
 }
@@ -21,7 +23,22 @@ border: 1px solid grey;
 width: 100%;
 height: 76%;
 background-image: url(${({img}) => img});
-background-size: contain;
+background-size: 100%;
+background-repeat: repeat-x;
+background-position: 0 -1.6rem;
+transition: .6s;
+overflow: hidden;
+&:hover {
+        background-size: 95%;
+        background-position: .5rem -1.6rem;
+        span:first-child {
+            left: -12px;
+            top: 12px;
+        }
+        a {
+            margin-top: 12.2rem;
+        }
+}
 `
 
 const HearthIcon = styled.span`
@@ -30,16 +47,47 @@ const HearthIcon = styled.span`
     position: relative;
     width: 36px;
     height: 36px;
-    left: -12px;
-    top: 12px;
+    left: ${({hearthActive}) => hearthActive ? "-12px" : "40px"};
+    top: ${({hearthActive}) => hearthActive ? "12px" : "-30px"};
     margin: 0 0 0 auto;
     background-image: url(${({hearth}) => hearth});
     background-size: contain;
+    transition: .6s;
+`
+
+const SeeProduct = styled(Link)`
+    content: '';
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 30%;
+    margin-top: 30rem;
+    backdrop-filter: brightness(34%);
+    box-shadow: -2px 2px 73px 50px rgba(0,0,0,0.75);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: center;
+    flex-direction: row;
+    transition: .6s;
+    cursor: pointer;
+    span {
+        display: block;
+        width: 40px;
+        height: 34px;
+        position: relative;
+        background-image: url(${({img}) => img});
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: .3rem 0 0 1rem;
+
+    }
 `
 
 const Row = styled.div`
 width: 100%;
-height: ${({isBig}) => isBig ? "10%" : "7%"};
+height: ${({isBig}) => isBig ? "9%" : "6%"};
 display: flex;
 flex-direction: row;
 align-items: center;
@@ -90,7 +138,17 @@ const favour = useSelector(state => state.changeFavourite);
     return (
         <Wrapper opacity={opacity}>
             <Picture className="product-hearth__active" img={img}>
-                <HearthIcon id={id} hearth={favour.arr.includes(id.toString()) ? hearthBlack : hearth} onClick={addItemToFavourite}></HearthIcon>
+                <HearthIcon 
+                    id={id} 
+                    hearth={favour.arr.includes(id.toString()) ? hearthBlack : hearth} 
+                    hearthActive={favour.arr.includes(id.toString()) ? true : false} 
+                    onClick={addItemToFavourite}>
+                </HearthIcon>
+                {/* <SeeProduct img={arrowRight} to={`/item/id${id}`}> */}
+                <SeeProduct img={arrowRight} to="/item">
+                    <p>Szczegoly</p>
+                    <span/>
+                </SeeProduct>
             </Picture>
             <Row>{displayCategory()}</Row>
             <Row isBig>

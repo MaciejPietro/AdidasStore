@@ -14,6 +14,14 @@ import shoes13 from '../img/shoes/shoes13.png'
 import shoes14 from '../img/shoes/shoes14.jpg'
 import shoes15 from '../img/shoes/shoes15.jpg'
 import shoes16 from '../img/shoes/shoes16.jpg'
+import shoes17 from '../img/shoes/shoes17.jpg'
+import shoes18 from '../img/shoes/shoes18.jpg'
+import shoes19 from '../img/shoes/shoes19.jpg'
+import shoes20 from '../img/shoes/shoes20.jpg'
+import shoes21 from '../img/shoes/shoes21.jpg'
+import shoes22 from '../img/shoes/shoes22.jpg'
+import shoes23 from '../img/shoes/shoes23.png'
+import shoes24 from '../img/shoes/shoes24.jpg'
 
 
 
@@ -29,9 +37,7 @@ export const products = [
         color: "black",
         price: 329,
         oldPrice: 440,
-        promotion: "promotion",
-        inCart: false,
-        inFavourite: false
+        promotion: "promotion"
     },
     {
         id: 1,
@@ -44,9 +50,7 @@ export const products = [
         color: "black",
         price: 300,
         oldPrice: "",
-        filterNew: "filterNew",
-        inCart: false,
-        inFavourite: false
+        filterNew: "filterNew"
     },
     {
         id: 2,
@@ -58,9 +62,7 @@ export const products = [
         colors: ["black", "blue"],
         color: "black",
         price: 210,
-        oldPrice: 300,
-        inCart: false,
-        inFavourite: false
+        oldPrice: 300
     },
     {
         id: 3,
@@ -72,9 +74,7 @@ export const products = [
         colors: ["black", "white", "blue"],
         color: "black",
         price: "329",
-        oldPrice: "",
-        inCart: false,
-        inFavourite: false
+        oldPrice: ""
     },
     {
         id: 4,
@@ -87,9 +87,7 @@ export const products = [
         color: "white",
         price: 150,
         oldPrice: 200,
-        filterNew: "filterNew",
-        inCart: false,
-        inFavourite: false
+        filterNew: "filterNew"
     },
     {
         id: 5,
@@ -101,9 +99,7 @@ export const products = [
         colors: ["white", "black"],
         color: "white",
         price: 500,
-        oldPrice: "",
-        inCart: false,
-        inFavourite: false
+        oldPrice: ""
     },
     {
         id: 6,
@@ -115,9 +111,7 @@ export const products = [
         colors: ["red", "white", "blue"],
         color: "red",
         price: 220,
-        oldPrice: 240,
-        inCart: false,
-        inFavourite: false
+        oldPrice: 240
     },
     {
         id: 7,
@@ -129,9 +123,7 @@ export const products = [
         colors: ["blue", "white", "red"],
         color: "blue",
         price: 329,
-        oldPrice: "",
-        inCart: false,
-        inFavourite: false
+        oldPrice: ""
     },
     {
         id: 8,
@@ -144,9 +136,7 @@ export const products = [
         color: "blue",
         price: 400,
         oldPrice: "",
-        filterNew: "filterNew",
-        inCart: false,
-        inFavourite: false
+        filterNew: "filterNew"
     },
     {
         id: 9,
@@ -159,9 +149,8 @@ export const products = [
         color: "red",
         price: 400,
         oldPrice: 600,
-        promotion: "promotion",
-        inCart: false,
-        inFavourite: false
+        promotion: "promotion"
+
     },
     {
         id: 10,
@@ -174,9 +163,7 @@ export const products = [
         color: "red",
         price: 180,
         oldPrice: "",
-        filterNew: "filterNew",
-        inCart: false,
-        inFavourite: false
+        filterNew: "filterNew"
     },
     {
         id: 11,
@@ -189,9 +176,7 @@ export const products = [
         color: "black",
         price: 120,
         oldPrice: 160,
-        promotion: "promotion",
-        inCart: false,
-        inFavourite: false
+        promotion: "promotion"
     },
     {
         id: 12,
@@ -203,9 +188,7 @@ export const products = [
         colors: ["blue", "red"],
         color: "blue",
         price: 290,
-        oldPrice: 310,
-        inCart: false,
-        inFavourite: false
+        oldPrice: 310
     },
     {
         id: 13,
@@ -217,9 +200,7 @@ export const products = [
         colors: ["blue", "red", "white"],
         color: "blue",
         price: 230,
-        oldPrice: "",
-        inCart: false,
-        inFavourite: false
+        oldPrice: ""
     },
     {
         id: 14,
@@ -232,9 +213,7 @@ export const products = [
         color: "red",
         price: 380,
         oldPrice: "",
-        filterNew: "filterNew",
-        inCart: false,
-        inFavourite: false
+        filterNew: "filterNew"
     },
     {
         id: 15,
@@ -247,8 +226,107 @@ export const products = [
         color: "black",
         price: 920,
         oldPrice: 1080,
-        special: "filterNew",
-        inCart: false,
-        inFavourite: false
+        special: "filterNew"
+    },
+    {
+        id: 16,
+        name: "Timory Pink",
+        image: shoes17,
+        sex: "woman",
+        sizes: [36, 37, 38],
+        size: "medium",
+        colors: ["pink", "yellow", "blue"],
+        color: "others",
+        price: 366,
+        oldPrice: 400,
+        promotion: "promotion"
+    },
+    {
+        id: 17,
+        name: "Shallow Sea",
+        image: shoes18,
+        sex: "woman",
+        sizes: [40,41,42,43,44],
+        size: "big",
+        colors: ["white", "blue", "black"],
+        color: "white",
+        price: 240,
+        filterNew: "filterNew"
+    },
+    {
+        id: 18,
+        name: "Semantic Grow",
+        image: shoes19,
+        sex: "woman",
+        sizes: [36, 37, 38],
+        size: "medium",
+        colors: ["white", "blue", "green"],
+        color: "white",
+        price: 124,
+        oldPrice: "",
+        special: "filterNew"
+    },
+    {
+        id: 19,
+        name: "Telemon Max",
+        image: shoes20,
+        sex: "woman",
+        sizes: [40,41,42,43,44],
+        size: "big",
+        colors: ["purple", "white", "black"],
+        color: "others",
+        price: 540,
+        oldPrice: 960,
+        promotion: "promotion"
+    },
+    {
+        id: 20,
+        name: "Silent Moon",
+        image: shoes21,
+        sex: "man",
+        sizes: [36, 37, 38],
+        size: "medium",
+        colors: ["black", "red", "green"],
+        color: "black",
+        price: 829,
+        oldPrice: "",
+        filterNew: "filterNew"
+    },
+    {
+        id: 21,
+        name: "Semicon Line",
+        image: shoes22,
+        sex: "woman",
+        sizes: [39, 40, 41, 42],
+        size: "big",
+        colors: ["red", "yellow", "blue"],
+        color: "red",
+        price: 300,
+        oldPrice: "",
+    },
+    {
+        id: 22,
+        name: "Porter Boo",
+        image: shoes23,
+        sex: "kid",
+        sizes: [31, 32, 33, 34],
+        size: "small",
+        colors: ["yellow", "blue"],
+        color: "others",
+        price: 210,
+        oldPrice: "",
+    },
+    {
+        id: 23,
+        name: "Timint Mit",
+        image: shoes24,
+        sex: "kid",
+        sizes: [31, 32, 33, 34],
+        size: "small",
+        colors: ["white", "red", "green"],
+        color: "white",
+        price: 90,
+        oldPrice: 1300,
+        promotion: "promotion"
     },
 ]

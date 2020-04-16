@@ -1,5 +1,5 @@
 const initialFavouriteState = {
-    arr:["5"]
+    arr:["5", "6", "7"]
 }
 
 
@@ -12,7 +12,7 @@ export const changeFavourite = (state = initialFavouriteState, action) => {
                 arr: [...array, action.item]
             }
         case 'REMOVE_FAVOURITE':
-            let index = array.indexOf(action.item);
+            let index = state.arr.indexOf(action.item.toString());
             array.splice(index, 1)
             return { 
                 ...state,

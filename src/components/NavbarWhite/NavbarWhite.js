@@ -1,14 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import logo from '../../img/icons/logo.png'
 import search from '../../img/icons/search.png'
 import favourite from '../../img/icons/favourite.png'
 import cart from '../../img/icons/cart.png'
 import login from '../../img/icons/login.png'
-import { products } from  '../../store/store'
 import { useDispatch, useSelector } from 'react-redux'
 import { toggleSidebar } from '../../redux/actions/actions'
-import { addFavourite } from '../../redux/actions/actions'
 import { Link } from "react-router-dom";
 
   
@@ -23,9 +21,9 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 background-color: white;
+border-bottom: 2px solid black;
 @media (max-width: 575px) {
     flex-direction: row-reverse;
-    border-bottom: 2px solid black;
 }
 `
 
