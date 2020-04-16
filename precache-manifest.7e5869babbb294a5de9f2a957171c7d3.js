@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0456287eb8ba443178426924377f4999",
+    "revision": "6ad7c35834aceb72c18c2a08d2eb531e",
     "url": "/AdidasStore/index.html"
   },
   {
-    "revision": "2ab76234254a3b42f7e0",
+    "revision": "e7885f5210e5dbff40e8",
     "url": "/AdidasStore/static/css/2.de424728.chunk.css"
   },
   {
-    "revision": "9613df366f8b8f5e693b",
-    "url": "/AdidasStore/static/css/main.aeec6b08.chunk.css"
+    "revision": "cfba83cd22b9a26c3d5f",
+    "url": "/AdidasStore/static/css/main.30bc8cfe.chunk.css"
   },
   {
-    "revision": "2ab76234254a3b42f7e0",
-    "url": "/AdidasStore/static/js/2.2bcd3e5f.chunk.js"
+    "revision": "e7885f5210e5dbff40e8",
+    "url": "/AdidasStore/static/js/2.69dffca0.chunk.js"
   },
   {
     "revision": "b92b369c485a56d25a5a7495ecf46b59",
-    "url": "/AdidasStore/static/js/2.2bcd3e5f.chunk.js.LICENSE.txt"
+    "url": "/AdidasStore/static/js/2.69dffca0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9613df366f8b8f5e693b",
-    "url": "/AdidasStore/static/js/main.14d5415b.chunk.js"
+    "revision": "cfba83cd22b9a26c3d5f",
+    "url": "/AdidasStore/static/js/main.fd621289.chunk.js"
   },
   {
     "revision": "379d3afead4abb3f7578",
@@ -76,12 +76,40 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/AdidasStore/static/media/shoes16.d508fa1f.jpg"
   },
   {
+    "revision": "b8dd9335ee71db3fe6594c55844fa738",
+    "url": "/AdidasStore/static/media/shoes17.b8dd9335.jpg"
+  },
+  {
+    "revision": "f30050a3829e0e3f0afa8e13d3a595db",
+    "url": "/AdidasStore/static/media/shoes18.f30050a3.jpg"
+  },
+  {
+    "revision": "26955a44b1352b87a5ad0132bb33e200",
+    "url": "/AdidasStore/static/media/shoes19.26955a44.jpg"
+  },
+  {
     "revision": "9d9e08150d49534ab93cc98b31eff25e",
     "url": "/AdidasStore/static/media/shoes2.9d9e0815.jpg"
   },
   {
     "revision": "c05b1119a56c2a0e4c0856d9e09c84d3",
     "url": "/AdidasStore/static/media/shoes2.c05b1119.jpg"
+  },
+  {
+    "revision": "74bd448a71a1082a13528a8e4d558494",
+    "url": "/AdidasStore/static/media/shoes20.74bd448a.jpg"
+  },
+  {
+    "revision": "33678d19ae64f0d39e6cf98baa2ff941",
+    "url": "/AdidasStore/static/media/shoes21.33678d19.jpg"
+  },
+  {
+    "revision": "f294a4a1aebeb6148512be0d2dc5f055",
+    "url": "/AdidasStore/static/media/shoes22.f294a4a1.jpg"
+  },
+  {
+    "revision": "dbaff28bdf6f4b5a14f52a4e5faa91cd",
+    "url": "/AdidasStore/static/media/shoes23.dbaff28b.png"
   },
   {
     "revision": "d512fe604d947d17a71b48b3ae5147d8",
