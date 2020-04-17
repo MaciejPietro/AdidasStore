@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Hearth from '../../img/icons/favourite.png'
 import HearthBlack from '../../img/icons/favouriteBlack.png'
@@ -7,6 +7,7 @@ import Home from '../../img/icons/Home.png'
 import Card from '../../img/icons/Card.png'
 import FormQuantity from '../Form/FormQuantity'
 import FormSize from '../Form/FormSize'
+import FormColors from '../Form/FormColors'
 import ToCartBtnLarge from '../Buttons/ToCartBtnLarge'
 
 const Wrapper = styled.div`
@@ -62,14 +63,16 @@ height: 3rem;
 `
 
 const ColorsRow = styled.div`
-span {
-    display: block;
-    width: 3rem;
-    height: 3rem;
-    background-color: red;
+
+`
+const SingleColor = styled.span`
+display: block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-color: ${({color}) => color};
     border-radius: 50%;
-    margin: 0 .5rem;
-}
+    margin: 0 .8rem 0 0;
+    border: 2px grey;
 `
 
 const SizeRow = styled.label`
@@ -123,7 +126,30 @@ div:nth-child(3) {
 `
 
 
-export function ItemInteractions() {
+export function ItemInteractions({ colors, id}) {
+
+
+    const setFormChoices = async (e) => {
+        // setSelectedColor(color)
+        console.log("now, selected color is", "cos")
+    }
+
+    // const addColorStyle = (e) => {
+    //     const favouriteColors = document.querySelectorAll(`.favouriteColors-${id}`)
+
+    //     favouriteColors.forEach(color => {
+    //         color.style.transform = "scale(1)"
+            
+    //     })
+    //     e.target.style.transform = "scale(1.35)"
+    // }
+
+    const selectColor = (e) => {
+        setFormChoices(e)
+        // addColorStyle(e)
+        // setFormChoices(e)
+    }
+
     return (
         <Wrapper>
             <FavouriteRow>
@@ -145,9 +171,13 @@ export function ItemInteractions() {
             </ColorsHeaderRow>
 
             <ColorsRow>
-                <span />
-                <span />
-                <span />
+       
+               <FormColors 
+               colors={colors} 
+               selectColor={selectColor}
+            //    selectedColor={selectedColor}
+               id={id}
+                    />
             </ColorsRow>
 
             <SizeRow>

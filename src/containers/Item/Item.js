@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import NavbarOptional from '../../components/NavbarOptional/NavbarOptional'
 import {ItemInteractions as Interactions} from '../../components/ItemInteractions/ItemInteractions'
 import { ItemImage as Image } from '../../components/ItemImage/ItemImage'
+import { products }from '../../store/store'
 
 const Wrapper = styled.section`
 width: 100vw;
@@ -16,17 +17,24 @@ flex-direction: row;
 `
 
 function Item() {
+    const [ selectedColor, setSelectedColor ] = useState(products[0].colors)
 
-    useEffect(() => {
-        window.scrollTo(0,0)
-    }, [])
+    const setFormChoices = async (e) => {
+        const color = e.currentTarget.getAttribute("color")
+        setSelectedColor(color)
+        console.log("now, selected color is", selectedColor)
+    }
 
     return (
         <Wrapper>
             <NavbarOptional />
             <Content>
                 <Image />
-                <Interactions />
+                <Interactions 
+                    id={products[0].id} 
+                    colors={products[0].colors} 
+                    sizes={products[0].sizes}
+                    setFormChoices={setFormChoices}/>
             </Content>
         </Wrapper>
     )
