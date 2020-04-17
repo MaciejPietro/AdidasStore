@@ -21,6 +21,7 @@ const Global = createGlobalStyle`
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    scroll-behavior: smooth;
   }
   ::-webkit-scrollbar {
     display: none;
