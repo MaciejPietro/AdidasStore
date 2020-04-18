@@ -330,3 +330,33 @@ export const products = [
         promotion: "promotion"
     },
 ]
+
+export const deliveryMethods = [
+    {
+        id: 0,
+        text: 'Kurier Pocztex 24/7',
+        price: 30
+    },
+    {
+        id: 2,
+        text: 'Kurier DHL',
+        price: 22
+    },
+    {
+        id: 3,
+        text: 'Paczka pocztowa priorytetowa',
+        price: 14
+    },
+    {
+        id: 4,
+        text: 'Paczkomat Inpost',
+        price: 8
+    },
+    {
+        id: 5,
+        text: 'Darmowa',
+        price: 0
+    },
+]
+
+

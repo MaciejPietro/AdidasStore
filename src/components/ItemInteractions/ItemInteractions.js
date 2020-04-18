@@ -1,24 +1,28 @@
-import React, { useState } from 'react'
+import React, {  } from 'react'
 import styled from 'styled-components'
 import Hearth from '../../img/icons/favourite.png'
-import HearthBlack from '../../img/icons/favouriteBlack.png'
+// import HearthBlack from '../../img/icons/favouriteBlack.png'
 import Delivery from '../../img/icons/Delivery.png'
 import Home from '../../img/icons/Home.png'
 import Card from '../../img/icons/Card.png'
 import FormQuantity from '../Form/FormQuantity'
 import FormSize from '../Form/FormSize'
 import FormColors from '../Form/FormColors'
-import ToCartBtnLarge from '../Buttons/ToCartBtnLarge'
+import ButtonLarge from '../Buttons/ButtonLarge'
 
 const Wrapper = styled.div`
-border: 2px solid pink;
 display: flex;
 flex: 1;
 flex-direction: column;
-padding: 5vw;
+padding: 2rem;
 div {
     display: flex;
     flex-direction: row;
+}
+@media (max-width: 991px) {
+    width: 50vw;
+    min-width: 20rem;
+    margin: 0 auto;
 }
 `
 const FavouriteRow = styled.div`
@@ -59,28 +63,24 @@ p:nth-child(2){
 const ColorsHeaderRow = styled.div`
 font-size: 1.6rem;
 font-weight: 400;
-height: 3rem;
+height: 2.4rem;
 `
 
 const ColorsRow = styled.div`
-
-`
-const SingleColor = styled.span`
-display: block;
-    width: 2.4rem;
-    height: 2.4rem;
-    background-color: ${({color}) => color};
-    border-radius: 50%;
-    margin: 0 .8rem 0 0;
-    border: 2px grey;
+margin-left: -.5rem;
+margin-bottom: .6rem;
 `
 
 const SizeRow = styled.label`
 width: 16rem;
+margin-bottom: 2rem;
+display: flex;
+justify-content: space-between;
 `
 
 const ButtonRow = styled.div`
 width: 16rem;
+margin-bottom: 1rem;
 `
 const Additional = styled.div`
 display: flex;
@@ -89,8 +89,6 @@ flex-wrap: wrap;
 margin: 0;
 
 div {
-  height: 1.6rem;
-
   span {
     display: block;
     width: 1.5rem;
@@ -126,29 +124,8 @@ div:nth-child(3) {
 `
 
 
-export function ItemInteractions({ colors, id}) {
+export function ItemInteractions({ colors, id, selectColor, selectSize, selectQuantity, addToCart}) {
 
-
-    const setFormChoices = async (e) => {
-        // setSelectedColor(color)
-        console.log("now, selected color is", "cos")
-    }
-
-    // const addColorStyle = (e) => {
-    //     const favouriteColors = document.querySelectorAll(`.favouriteColors-${id}`)
-
-    //     favouriteColors.forEach(color => {
-    //         color.style.transform = "scale(1)"
-            
-    //     })
-    //     e.target.style.transform = "scale(1.35)"
-    // }
-
-    const selectColor = (e) => {
-        setFormChoices(e)
-        // addColorStyle(e)
-        // setFormChoices(e)
-    }
 
     return (
         <Wrapper>
@@ -173,20 +150,20 @@ export function ItemInteractions({ colors, id}) {
             <ColorsRow>
        
                <FormColors 
-               colors={colors} 
-               selectColor={selectColor}
-            //    selectedColor={selectedColor}
-               id={id}
+                colors={colors} 
+                selectColor={selectColor}
+                id={id}
+                text={"Kolor"}
                     />
             </ColorsRow>
 
             <SizeRow>
-                <FormSize />
-                <FormQuantity />
+                <FormSize selectSize={selectSize}/>
+                <FormQuantity selectQuantity={selectQuantity}/>
             </SizeRow>
 
             <ButtonRow>
-                <ToCartBtnLarge />
+                <ButtonLarge addToCart={addToCart} text={"Dodaj do koszyka"}/>
             </ButtonRow>
             <Additional>
                 <div>

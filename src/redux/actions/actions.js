@@ -4,6 +4,12 @@ export const toggleSidebar = () => {
     }
 }
 
+export const toggleLogModal = () => {
+    return {
+        type: 'TOGGLE_LOGMODAL'
+    }
+}
+
 export const filterMan = () => {
     return {
         type: 'FILTER_MAN'
@@ -91,6 +97,19 @@ export const removeFavourite = item => {
     }
 }
 
+export const addCart = item => {
+    return {
+        type: 'ADD_CART',
+        item
+    }
+}
+
+export const removeCart = item => {
+    return {
+        type: 'REMOVE_CART',
+        item
+    }
+}
 
 
 

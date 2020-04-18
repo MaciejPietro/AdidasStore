@@ -4,11 +4,16 @@ import styled from 'styled-components'
 const Select = styled.select`
 height: 2rem;
 width: 25%;
+letter-spacing: .7px;
+font-size: .8rem;
+&:focus {
+    outline: none;
+}
 `
 
-function FormQuantity() {
+function FormQuantity({selectQuantity}) {
     return (
-        <Select  id="cars" name="size">
+        <Select  id="cars" name="size" onChange={selectQuantity}>
             <option value=""  hidden>Ilosc</option>
             <option value="1">1</option>
             <option value="2">2</option>

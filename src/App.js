@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Paul from './img/fonts/Paul.ttf'
+import Capleton from './img/fonts/Paul.ttf'
 import { createGlobalStyle } from 'styled-components'
 import {
   BrowserRouter as Router,
@@ -12,7 +13,9 @@ import NavbarBlack from './components/NavbarBlack/NavbarBlack'
 import Home from './containers/Home/Home'
 import Products from './containers/Products/Products'
 import Favourites from './containers/Favourites/Favourites'
+import Cart from './containers/Cart/Cart'
 import Item from './containers/Item/Item'
+import LogModal from './containers/LogModal/LogModal'
 
 
 
@@ -32,6 +35,12 @@ const Global = createGlobalStyle`
     font-weight: normal;
     font-style: normal;
   }
+  @font-face {
+    font-family: 'Capleton';
+    src: url(${Capleton}) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
 `
 function App() {
 
@@ -40,6 +49,7 @@ function App() {
       <Global />
       <NavbarWhite/>
       <NavbarBlack />
+      <LogModal />
       <Switch>
           <Route exact path="/" >
             <>
@@ -49,6 +59,9 @@ function App() {
           </Route>
           <Route path="/favourites">
             <Favourites />
+          </Route>
+          <Route path="/cart">
+            <Cart />
           </Route>
           <Route path="/item">
             <Item />

@@ -53,3 +53,11 @@ border: 1.4px solid black!important;
     height: 2rem;
 }
 
+.modal-info__onRight {
+    transform: translate(164%);
+}
+
+.modal-form__toggle {
+    transform: translate(-64%);
+}
+

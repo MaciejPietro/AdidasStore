@@ -1,17 +1,17 @@
-const initialFavouriteState = {
-    arr:[]
+const initialCartState = {
+    arr:["1", "2", "3"]
 }
 
 
-export const changeFavourite = (state = initialFavouriteState, action) => {
+export const changeCart = (state = initialCartState, action) => {
     let array = state.arr
     switch(action.type) {
-        case 'ADD_FAVOURITE':
+        case 'ADD_CART':
             return { 
                 ...state,
                 arr: [...array, action.item]
             }
-        case 'REMOVE_FAVOURITE':
+        case 'REMOVE_CART':
             let index = state.arr.indexOf(action.item.toString());
             array.splice(index, 1)
             return { 

@@ -47,13 +47,13 @@ margin-left: 3.8rem;
 transition: .6s;
 `
 
-function ToCartBtnLarge() {
+function ButtonLarge({addToCart, submitPursue, text}) {
     return (
-        <Wrapper className="mr-auto">
-            <p className="mr-5 mt-0">Dodaj do koszyka</p>
+        <Wrapper className="mr-auto" onClick={text === "Zrealizuj zamowienie" ? submitPursue : addToCart}>
+            <p className="mr-5 mt-0">{text}</p>
             <Icon img={Cart} />
         </Wrapper>
     )
 }
 
-export default ToCartBtnLarge
+export default ButtonLarge

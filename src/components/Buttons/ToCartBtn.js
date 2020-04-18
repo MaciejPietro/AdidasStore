@@ -20,9 +20,9 @@ background-image: url(${({img}) => img});
 background-size: contain;
 background-repeat: no-repeat;
 `
-function ToCartBtn() {
+function ToCartBtn({click, id}) {
     return (
-        <Button className="ml-auto mr-3 p-0 pl-1">
+        <Button className="ml-auto mr-3 p-0 pl-1" id={id} onClick={click}>
             Do koszyka
             <Icon className="ml-auto mr-1" img={cart}/>
         </Button>

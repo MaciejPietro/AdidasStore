@@ -5,7 +5,7 @@ import hearthBlack from '../../img/icons/favouriteBlack.png'
 import arrowRight from '../../img/icons/arrowRight.png'
 import { useDispatch, useSelector } from 'react-redux'
 import ToCartBtn from '../Buttons/ToCartBtn'
-import { addFavourite, removeFavourite } from '../../redux/actions/actions'
+import { addFavourite, removeFavourite, addCart, removeCart } from '../../redux/actions/actions'
 import { Link } from "react-router-dom";
 
 const Wrapper = styled.div`
@@ -127,11 +127,18 @@ const favour = useSelector(state => state.changeFavourite);
     }
 
     const addItemToFavourite = (e) => {
-
         if(favour.arr.includes(e.currentTarget.id)) {
             dispatch(removeFavourite(e.currentTarget.id))
         } else if(!favour.arr.includes(e.currentTarget.id)) {
             dispatch(addFavourite(e.currentTarget.id))
+        }
+    }
+
+    const addItemToCart = (e) => {
+        if(favour.arr.includes(e.currentTarget.id)) {
+            dispatch(removeCart(e.currentTarget.id))
+        } else if(!favour.arr.includes(e.currentTarget.id)) {
+            dispatch(addCart(e.currentTarget.id))
         }
     }
 
@@ -153,7 +160,9 @@ const favour = useSelector(state => state.changeFavourite);
             <Row>{displayCategory()}</Row>
             <Row isBig>
                 <h5>{name}</h5>
-                <ToCartBtn />
+                <ToCartBtn 
+                    id={id} 
+                    click={addItemToCart}/>
             </Row>
             <Row>
                 <Price>

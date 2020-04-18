@@ -6,7 +6,7 @@ import favourite from '../../img/icons/favourite.png'
 import cart from '../../img/icons/cart.png'
 import login from '../../img/icons/login.png'
 import { useDispatch, useSelector } from 'react-redux'
-import { toggleSidebar } from '../../redux/actions/actions'
+import { toggleSidebar, toggleLogModal } from '../../redux/actions/actions'
 import { Link } from "react-router-dom";
 
   
@@ -56,8 +56,8 @@ flex-direction: row;
 min-width: 8rem;
 height: 6vh;
 cursor: pointer;
+color: black;
  p {
-     color: black;
      font-size: 1rem;
      letter-spacing: 1.6px;
      height: 8vh;
@@ -66,7 +66,7 @@ cursor: pointer;
 
 
 div {
-    display: flex;
+    display: ${({items}) => items ? "flex" : "none"};
     position: absolute;
     width: 17px;
     height: 17px;
@@ -167,30 +167,35 @@ justify-content: space-between;
 
 function NavbarWhite({ click }) {
 const dispatch = useDispatch()
-const favour = useSelector(state => state.changeFavourite);
+const favourites = useSelector(state => state.changeFavourite);
+const carts = useSelector(state => state.changeCart);
 const [ searchBar, setSearchBar ] = useState(false)
+
+const toggleModal = () => {
+    dispatch(toggleLogModal())
+}
 
 const options = [
     {
       name: "Ulubione",
       icon: favourite,
-      items: favour.arr.length,
+      items: favourites.arr.length,
       to: "/favourites"
 
     },
     {
       name: "Koszyk",
       icon: cart,
-      items: 1,
+      items: carts.arr.length,
       to: "/cart"
     },
     {
       name: "Zaloguj",
       icon: login,
-      to: "/login"
+      to: '',
+      click: toggleModal
     }
   ]
-
 
     function toggleSearchBar() {
         setSearchBar(!searchBar)
@@ -219,7 +224,11 @@ const options = [
 
             <Options className="col-xl-4 col-5">
                 {options.map(option => (
-                    <Option key={option.name} to={option.to}>                   
+                    <Option 
+                        key={option.name} 
+                        to={option.to}
+                        onClick={option.click}
+                        items={option.items}>                   
                             <Icon img={option.icon}/>
                             <div>{option.items}</div>
                             <p>{option.name}</p>     
