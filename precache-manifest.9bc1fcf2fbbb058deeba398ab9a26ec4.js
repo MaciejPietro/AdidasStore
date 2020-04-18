@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b61b5d75a8f867d2d76fc4fd36ab342c",
+    "revision": "1683dec6ce9b6204232c1fa9bc11340d",
     "url": "/AdidasStore/index.html"
   },
   {
-    "revision": "a78c777b88a67a3653ce",
+    "revision": "f539b7896e69234ddcac",
     "url": "/AdidasStore/static/css/2.de424728.chunk.css"
   },
   {
-    "revision": "cd3dff156eb88ab778a5",
-    "url": "/AdidasStore/static/css/main.30bc8cfe.chunk.css"
+    "revision": "4bd2b1f19fffe9dcbe07",
+    "url": "/AdidasStore/static/css/main.612a3cfb.chunk.css"
   },
   {
-    "revision": "a78c777b88a67a3653ce",
-    "url": "/AdidasStore/static/js/2.749be91f.chunk.js"
+    "revision": "f539b7896e69234ddcac",
+    "url": "/AdidasStore/static/js/2.9a0269df.chunk.js"
   },
   {
-    "revision": "b92b369c485a56d25a5a7495ecf46b59",
-    "url": "/AdidasStore/static/js/2.749be91f.chunk.js.LICENSE.txt"
+    "revision": "fed73c0e498e82c1b612893de5d07fde",
+    "url": "/AdidasStore/static/js/2.9a0269df.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "cd3dff156eb88ab778a5",
-    "url": "/AdidasStore/static/js/main.6c226eeb.chunk.js"
+    "revision": "4bd2b1f19fffe9dcbe07",
+    "url": "/AdidasStore/static/js/main.39b97be2.chunk.js"
   },
   {
     "revision": "379d3afead4abb3f7578",
@@ -54,6 +54,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "e941a83714da8134b0a11b0ebfc597e2",
     "url": "/AdidasStore/static/media/favouriteBlack.e941a837.png"
+  },
+  {
+    "revision": "9f8334d30e2e1aa7a238328c9569df1f",
+    "url": "/AdidasStore/static/media/reload.9f8334d3.png"
   },
   {
     "revision": "0de565b10153351a11b682587df4fbc3",

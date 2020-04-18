@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/AdidasStore/static/css/main.30bc8cfe.chunk.css",
-    "main.js": "/AdidasStore/static/js/main.6c226eeb.chunk.js",
-    "main.js.map": "/AdidasStore/static/js/main.6c226eeb.chunk.js.map",
+    "main.css": "/AdidasStore/static/css/main.612a3cfb.chunk.css",
+    "main.js": "/AdidasStore/static/js/main.39b97be2.chunk.js",
+    "main.js.map": "/AdidasStore/static/js/main.39b97be2.chunk.js.map",
     "runtime-main.js": "/AdidasStore/static/js/runtime-main.c48372d2.js",
     "runtime-main.js.map": "/AdidasStore/static/js/runtime-main.c48372d2.js.map",
     "static/css/2.de424728.chunk.css": "/AdidasStore/static/css/2.de424728.chunk.css",
-    "static/js/2.749be91f.chunk.js": "/AdidasStore/static/js/2.749be91f.chunk.js",
-    "static/js/2.749be91f.chunk.js.map": "/AdidasStore/static/js/2.749be91f.chunk.js.map",
+    "static/js/2.9a0269df.chunk.js": "/AdidasStore/static/js/2.9a0269df.chunk.js",
+    "static/js/2.9a0269df.chunk.js.map": "/AdidasStore/static/js/2.9a0269df.chunk.js.map",
     "index.html": "/AdidasStore/index.html",
-    "precache-manifest.9fb22f6c5b0e120d244b18ea60751b83.js": "/AdidasStore/precache-manifest.9fb22f6c5b0e120d244b18ea60751b83.js",
+    "precache-manifest.9bc1fcf2fbbb058deeba398ab9a26ec4.js": "/AdidasStore/precache-manifest.9bc1fcf2fbbb058deeba398ab9a26ec4.js",
     "service-worker.js": "/AdidasStore/service-worker.js",
     "static/css/2.de424728.chunk.css.map": "/AdidasStore/static/css/2.de424728.chunk.css.map",
-    "static/css/main.30bc8cfe.chunk.css.map": "/AdidasStore/static/css/main.30bc8cfe.chunk.css.map",
-    "static/js/2.749be91f.chunk.js.LICENSE.txt": "/AdidasStore/static/js/2.749be91f.chunk.js.LICENSE.txt",
+    "static/css/main.612a3cfb.chunk.css.map": "/AdidasStore/static/css/main.612a3cfb.chunk.css.map",
+    "static/js/2.9a0269df.chunk.js.LICENSE.txt": "/AdidasStore/static/js/2.9a0269df.chunk.js.LICENSE.txt",
     "static/media/Card.png": "/AdidasStore/static/media/Card.ff221aa4.png",
     "static/media/Home.png": "/AdidasStore/static/media/Home.19ed7c8b.png",
     "static/media/Paul.ttf": "/AdidasStore/static/media/Paul.aa80cfa2.ttf",
@@ -21,6 +21,7 @@
     "static/media/checked.png": "/AdidasStore/static/media/checked.c97af4bf.png",
     "static/media/favourite.png": "/AdidasStore/static/media/favourite.eda842e1.png",
     "static/media/favouriteBlack.png": "/AdidasStore/static/media/favouriteBlack.e941a837.png",
+    "static/media/reload.png": "/AdidasStore/static/media/reload.9f8334d3.png",
     "static/media/shoes.jpg": "/AdidasStore/static/media/shoes.0de565b1.jpg",
     "static/media/shoes1.jpg": "/AdidasStore/static/media/shoes1.08e1ddf6.jpg",
     "static/media/shoes10.jpg": "/AdidasStore/static/media/shoes10.8ee387d2.jpg",
@@ -46,8 +47,8 @@
   "entrypoints": [
     "static/js/runtime-main.c48372d2.js",
     "static/css/2.de424728.chunk.css",
-    "static/js/2.749be91f.chunk.js",
-    "static/css/main.30bc8cfe.chunk.css",
-    "static/js/main.6c226eeb.chunk.js"
+    "static/js/2.9a0269df.chunk.js",
+    "static/css/main.612a3cfb.chunk.css",
+    "static/js/main.39b97be2.chunk.js"
   ]
 }
