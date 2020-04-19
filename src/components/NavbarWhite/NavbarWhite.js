@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import logo from '../../img/icons/logo.png'
 import search from '../../img/icons/search.png'
@@ -168,6 +168,7 @@ justify-content: space-between;
 function NavbarWhite({ click }) {
 const dispatch = useDispatch()
 const favourites = useSelector(state => state.changeFavourite);
+const isLogged = useSelector(state => state.isLogged)
 const carts = useSelector(state => state.changeCart);
 const [ searchBar, setSearchBar ] = useState(false)
 
@@ -190,7 +191,7 @@ const options = [
       to: "/cart"
     },
     {
-      name: "Zaloguj",
+      name: isLogged.isLogged ? isLogged.name : "Zaloguj",
       icon: login,
       to: '',
       click: toggleModal
@@ -206,7 +207,9 @@ const options = [
         dispatch(toggleSidebar())
     }
 
-    
+    // useEffect(() => {
+
+    // }, [isLogged])
 
     return (
         <Wrapper className="sticky-top">

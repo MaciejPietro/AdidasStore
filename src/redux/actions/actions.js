@@ -111,6 +111,24 @@ export const removeCart = item => {
     }
 }
 
+export const login = (name, password, mail) => {
+    return {
+        type: 'LOGIN',
+        name,
+        password,
+        mail
+    }
+}
+
+export const isLogged = (name) => {
+    return {
+        type: 'IS_LOGGED',
+        name
+
+    }
+}
+
+
 
 
 

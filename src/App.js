@@ -16,6 +16,7 @@ import Favourites from './containers/Favourites/Favourites'
 import Cart from './containers/Cart/Cart'
 import Item from './containers/Item/Item'
 import LogModal from './containers/LogModal/LogModal'
+import UserModal from './containers/UserModal/UserModal'
 
 
 
@@ -50,6 +51,7 @@ function App() {
       <NavbarWhite/>
       <NavbarBlack />
       <LogModal />
+      <UserModal />
       <Switch>
           <Route exact path="/" >
             <>

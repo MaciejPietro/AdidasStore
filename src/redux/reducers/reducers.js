@@ -4,6 +4,7 @@ import { sexFilter, sizeFilter, colorFilter, sortFilter } from './filter'
 import { changeFavourite } from './inFavourite'
 import { changeCart } from './inCart'
 import { combineReducers } from 'redux';
+import { login, isLogged } from './login'
 
 const reducers = combineReducers({
     sidebar: toggleSidebar,
@@ -13,7 +14,9 @@ const reducers = combineReducers({
     colorFilter,
     sortFilter,
     changeFavourite,
-    changeCart
+    changeCart,
+    login,
+    isLogged
 })
 
 export default reducers
