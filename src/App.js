@@ -8,6 +8,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import { useSelector } from 'react-redux'
 import NavbarWhite from './components/NavbarWhite/NavbarWhite'
 import NavbarBlack from './components/NavbarBlack/NavbarBlack'
 import Home from './containers/Home/Home'
@@ -17,6 +18,8 @@ import Cart from './containers/Cart/Cart'
 import Item from './containers/Item/Item'
 import LogModal from './containers/LogModal/LogModal'
 import UserModal from './containers/UserModal/UserModal'
+import Footer from './containers/Footer/Footer'
+
 
 
 
@@ -44,8 +47,10 @@ const Global = createGlobalStyle`
   }
 `
 function App() {
+  const singleItemId = useSelector(state => state.singleItem);
 
   return (
+
     <Router> 
       <Global />
       <NavbarWhite/>
@@ -57,6 +62,7 @@ function App() {
             <>
               <Home />
               <Products />
+      
             </>
           </Route>
           <Route path="/favourites">
@@ -65,11 +71,14 @@ function App() {
           <Route path="/cart">
             <Cart />
           </Route>
+          {/* <Route path={`/item/${singleItemId}`}> */}
           <Route path="/item">
             <Item />
           </Route>
       </Switch>
+      <Footer />
     </Router>
+ 
   );
 }
 

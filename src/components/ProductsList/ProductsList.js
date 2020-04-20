@@ -5,13 +5,17 @@ import Product from '../Product/Product'
 
 const Wrapper = styled.div`
 width: 90vw;
-height: 1200px;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
 flex-wrap: wrap;
 flex: 1;
 margin-top: 1rem;
+h1 {
+    width: 100vw;
+    text-align: center;
+    margin-top: 2rem;
+}
 @media (max-width: 1070px) {
     padding: 0 10vw;
 }
@@ -44,9 +48,10 @@ useEffect(() => {
                     inFavourite={product.inFavourite}
                     />
                 ))}
-            <Product id={-1} opacity={"0"}/>
-            <Product id={-1}opacity={"0"}/>
-            <Product id={-1} opacity={"0"}/>
+            {filteredStore.length === 0 ? <h1>Nic tutaj nie ma</h1> : ""}
+            <Product id={-1} opacity={"0"} />
+            <Product id={-1} opacity={"0"} />
+            <Product id={-1} opacity={"0"} />
         </Wrapper>
     )
 }

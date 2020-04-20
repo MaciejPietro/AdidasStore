@@ -5,12 +5,12 @@ import hearthBlack from '../../img/icons/favouriteBlack.png'
 import arrowRight from '../../img/icons/arrowRight.png'
 import { useDispatch, useSelector } from 'react-redux'
 import ToCartBtn from '../Buttons/ToCartBtn'
-import { addFavourite, removeFavourite, addCart, removeCart } from '../../redux/actions/actions'
+import { addFavourite, removeFavourite, addCart, removeCart, singleItem } from '../../redux/actions/actions'
 import { Link } from "react-router-dom";
 
 const Wrapper = styled.div`
 width: 20rem;
-height: 24rem;
+height: ${({opacity}) => opacity === "0" ? "1px" : "24rem"};
 opacity: ${({opacity}) => opacity};
 margin-bottom: 1.4rem;
 @media (max-width: 720px) {
@@ -36,7 +36,7 @@ overflow: hidden;
             top: 12px;
         }
         a {
-            margin-top: 12.2rem;
+            margin-top: 12.8rem;
         }
 }
 `
@@ -61,27 +61,36 @@ const SeeProduct = styled(Link)`
     position: relative;
     width: 100%;
     height: 30%;
-    margin-top: 30rem;
+    margin-top: 33rem;
     backdrop-filter: brightness(34%);
     box-shadow: -2px 2px 73px 50px rgba(0,0,0,0.75);
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 300;
-    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1.4px;
     justify-content: center;
     flex-direction: row;
     transition: .6s;
     cursor: pointer;
+    p {
+        margin: 1rem 0 0 1rem;
+        font-weight: 200;
+        letter-spacing: 2px;
+    }
     span {
         display: block;
-        width: 40px;
-        height: 34px;
+        width: 30px;
+        height: 24px;
         position: relative;
         background-image: url(${({img}) => img});
         background-size: contain;
         background-repeat: no-repeat;
-        margin: .3rem 0 0 1rem;
+        margin: 1.4rem 0 0 1rem;
 
+    }
+    &:hover {
+        text-decoration: none;
+        color: white;
     }
 `
 
@@ -114,7 +123,9 @@ p:last-child {
 
 function Product({img, name, price, oldPrice, opacity, category, id}) {
 const dispatch = useDispatch()
-const favour = useSelector(state => state.changeFavourite);
+const itemsInFacourite = useSelector(state => state.changeFavourite);
+const itemsInCart = useSelector(state => state.changeCart);
+
 
     const displayCategory = () => {
         if(category === "man") {
@@ -127,19 +138,24 @@ const favour = useSelector(state => state.changeFavourite);
     }
 
     const addItemToFavourite = (e) => {
-        if(favour.arr.includes(e.currentTarget.id)) {
+        if(itemsInFacourite.arr.includes(e.currentTarget.id)) {
             dispatch(removeFavourite(e.currentTarget.id))
-        } else if(!favour.arr.includes(e.currentTarget.id)) {
+        } else if(!itemsInFacourite.arr.includes(e.currentTarget.id)) {
             dispatch(addFavourite(e.currentTarget.id))
         }
     }
 
     const addItemToCart = (e) => {
-        if(favour.arr.includes(e.currentTarget.id)) {
+        if(itemsInCart.arr.includes(e.currentTarget.id)) {
             dispatch(removeCart(e.currentTarget.id))
-        } else if(!favour.arr.includes(e.currentTarget.id)) {
-            dispatch(addCart(e.currentTarget.id))
+        } else if(!itemsInCart.arr.includes(e.currentTarget.id)) {
+            dispatch(addCart(e.currentTarget.id, "", "", ""))
         }
+    }
+
+    const setItemIdToSingleView = () => {
+        console.log(id)
+        dispatch(singleItem(id))
     }
 
     return (
@@ -147,12 +163,11 @@ const favour = useSelector(state => state.changeFavourite);
             <Picture className="product-hearth__active" img={img}>
                 <HearthIcon 
                     id={id} 
-                    hearth={favour.arr.includes(id.toString()) ? hearthBlack : hearth} 
-                    hearthActive={favour.arr.includes(id.toString()) ? true : false} 
+                    hearth={itemsInFacourite.arr.includes(id.toString()) ? hearthBlack : hearth} 
+                    hearthActive={itemsInFacourite.arr.includes(id.toString()) ? true : false} 
                     onClick={addItemToFavourite}>
                 </HearthIcon>
-                {/* <SeeProduct img={arrowRight} to={`/item/id${id}`}> */}
-                <SeeProduct img={arrowRight} to="/item">
+                <SeeProduct img={arrowRight} to={`/item/${id}`} onClick={setItemIdToSingleView}>
                     <p>Szczegoly</p>
                     <span/>
                 </SeeProduct>

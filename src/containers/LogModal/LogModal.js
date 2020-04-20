@@ -10,12 +10,11 @@ import SignInInformation from '../../components/SignInformation/SignInformation'
 const Wrapper = styled.div`
 width: 54rem;
 height: 30rem;
-border: 2px solid black;
 display: flex;
 transition: 1s;
 flex-direction: row;
 z-index: 0;
-overflow: visible;
+overflow: hidden;
 `
 
 Modal.setAppElement('#root')

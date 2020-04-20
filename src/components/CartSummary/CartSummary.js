@@ -67,7 +67,7 @@ input {
 `
 
 function CartSummary({favouritesProducts, submitPursue}) {
-console.log(favouritesProducts)
+
 
     return (
         <Wrapper className="row">

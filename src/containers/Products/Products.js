@@ -15,7 +15,6 @@ filterSort
 
 const Wrapper = styled.section`
 width: 100vw;
-height: 1000px;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -168,7 +167,7 @@ useEffect(() => {
  
  return (
         <Wrapper>
-            <Heading text={'Find your own'}/>
+            <Heading text={'Znajdz swoje wlasne'}/>
             <Filters checkboxClick={toggleCheckbox} sortClick={sortClick} sortText={sortText}/>
             <ProductsList filteredStore={sortProducts}/>
         </Wrapper>

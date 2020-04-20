@@ -83,7 +83,7 @@ export const products = [
         sex: "woman",
         sizes: [36, 38, 40],
         size: "medium",
-        colors: ["white", "white", "blue"],
+        colors: ["white", "blue"],
         color: "white",
         price: 150,
         oldPrice: 200,

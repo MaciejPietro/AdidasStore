@@ -27,7 +27,7 @@ function HeaderRight() {
     return (
         <Wrapper className="col-md-5 col-12 order-1 order-md-2">
             <Logos className="mx-auto" img={Logo}></Logos>
-            <Heading text={'Nieoficjalny, niedzialajacy'} textBold={"Sklep Adidas"}/>         
+            <Heading text={'Nieoficjalny, nieskonczony'} textBold={"Sklep Adidas"} letterSpacing={"3px"}/>         
         </Wrapper>
     )
 }

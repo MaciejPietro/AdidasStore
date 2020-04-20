@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { useDispatch, useSelector } from 'react-redux'
 import { products }from '../../store/store'
@@ -32,24 +32,33 @@ margin: 1.2rem 0;
 
 function Cart() {
     const dispatch = useDispatch()
-    const carts = useSelector(state => state.changeCart);
-    
+    const cartItems = useSelector(state => state.changeCart);
+   const [ arr, setArr ] = useState()
 
-    const favouritesProducts = products.filter(product => {
-        const item = carts.arr.includes(product.id.toString()) ? product : null
-        return item
+//     const cartProducts = products.filter((product, i) => {
+//      if(cartItems.arr[i] !== undefined ) {
+//             console.log(cartItems.arr[i].id)
+//             return products[cartItems.arr[i].id] 
+//      }  
+//     }
+// )
+
+const cartProducts = () => {
+    cartItems.arr.forEach(item => {
+        console.log(item)
     })
+}
 
     const deleteClick = (id) => {
         dispatch(removeCart(id))
     }
 
     const submitPursue = () => {
-        console.log("zamowiles")
+        alert("zamowiles")
     }
  
     useEffect(() => {
-
+        cartProducts()
     }, [])
 
 
@@ -57,7 +66,7 @@ function Cart() {
         <Wrapper>
             <Heading text="Twoj koszyk" letterSpacing="4px" />
             <List>
-                {favouritesProducts.map(product => (
+                {/* {cartProducts.map(product => (
                     <Item key={product.name} className="row">
                             <Description 
                                 deleteClick={deleteClick} 
@@ -70,9 +79,9 @@ function Cart() {
                                 sizes={product.sizes}
                                 />
                     </Item>
-                ))}
+                ))} */}
             </List>
-            <CartSummary favouritesProducts={favouritesProducts} submitPursue={submitPursue}/>
+            <CartSummary cartProducts={cartProducts} submitPursue={submitPursue}/>
         </Wrapper>
     )
 }

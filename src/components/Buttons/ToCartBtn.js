@@ -5,20 +5,27 @@ import cart from '../../img/icons/cart.png'
 const Button = styled.button`
 width: 5.8rem;
 height: 1.8rem;
-border: 2px solid grey;
+border: 1.4px solid gray;
 background-color: white;
 display: flex;
 flex-direction: row;
 justify-content: flex-center;
 font-size: .7rem;
+color: gray;
+transition: .5s;
+&:hover {
+    border: 1.4px solid black; 
+    color: black;
+}
 `
 const Icon = styled.span`
 display: block;
-width: 1.3rem;
-height: 1.2rem;
+width: 1rem;
+height: 1rem;
 background-image: url(${({img}) => img});
 background-size: contain;
 background-repeat: no-repeat;
+margin-top: 2px;
 `
 function ToCartBtn({click, id}) {
     return (

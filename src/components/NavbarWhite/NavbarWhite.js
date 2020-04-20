@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import logo from '../../img/icons/logo.png'
-import search from '../../img/icons/search.png'
+// import search from '../../img/icons/search.png'
 import favourite from '../../img/icons/favourite.png'
 import cart from '../../img/icons/cart.png'
 import login from '../../img/icons/login.png'
@@ -85,7 +85,10 @@ div {
     }
 }
 
-
+&:hover {
+    text-decoration: none;
+    color: black;
+}
 
  @media (max-width: 991px) {
     min-width: 0;
@@ -96,41 +99,41 @@ div {
  }
 `
 
-const Search = styled.label`
-display: flex;
-flex-direction: row;
-align-items: center;
-&::after {
-    content: '';
-    position: relative;
-    height: 2rem;
-    width: 2rem;
-    margin-top: .4rem;
-    background-color: black;
-    background-image: url(${({img}) => img});
-    filter: ${({active}) => active ? "" : "invert(1)"};
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    background-position: center;
-    background-size: 50%;
-    transition: .4s;
-}
-`
-const Bar = styled.input`
-margin-top: .4rem;
-height: 2.13rem;
-transform: translate(2.1rem);
-border-radius: 50px 50px 50px 50px;
-border: 1px solid black;
-padding-left: 10px;
-transition: .8s;
-width: ${({active}) => active ? "20vw" : "2.2rem"};
-max-width: 14rem;
-outline: none;
-@media (max-width: 575px) {
-    width: ${({active}) => active ? "36vw" : "2.2rem"};
-}
-`
+// const Search = styled.label`
+// display: flex;
+// flex-direction: row;
+// align-items: center;
+// &::after {
+//     content: '';
+//     position: relative;
+//     height: 2rem;
+//     width: 2rem;
+//     margin-top: .4rem;
+//     background-color: black;
+//     background-image: url(${({img}) => img});
+//     filter: ${({active}) => active ? "" : "invert(1)"};
+//     background-repeat: no-repeat;
+//     border-radius: 50%;
+//     background-position: center;
+//     background-size: 50%;
+//     transition: .4s;
+// }
+// `
+// const Bar = styled.input`
+// margin-top: .4rem;
+// height: 2.13rem;
+// transform: translate(2.1rem);
+// border-radius: 50px 50px 50px 50px;
+// border: 1px solid black;
+// padding-left: 10px;
+// transition: .8s;
+// width: ${({active}) => active ? "20vw" : "2.2rem"};
+// max-width: 14rem;
+// outline: none;
+// @media (max-width: 575px) {
+//     width: ${({active}) => active ? "36vw" : "2.2rem"};
+// }
+// `
 
 const Icon = styled.span`
 display: block;
@@ -170,7 +173,7 @@ const dispatch = useDispatch()
 const favourites = useSelector(state => state.changeFavourite);
 const isLogged = useSelector(state => state.isLogged)
 const carts = useSelector(state => state.changeCart);
-const [ searchBar, setSearchBar ] = useState(false)
+// const [ searchBar, setSearchBar ] = useState(false)
 
 const toggleModal = () => {
     dispatch(toggleLogModal())
@@ -198,9 +201,9 @@ const options = [
     }
   ]
 
-    function toggleSearchBar() {
-        setSearchBar(!searchBar)
-    }
+    // function toggleSearchBar() {
+    //     setSearchBar(!searchBar)
+    // }
 
     function toggleButton(e) {
         e.currentTarget.classList.toggle('navbar-btn__active');
@@ -221,9 +224,9 @@ const options = [
                 <span />
             </Button>
 
-            <Search className="ml-auto" img={search} active={searchBar}>
+            {/* <Search className="ml-auto" img={search} active={searchBar}>
                     <Bar onClick={toggleSearchBar} active={searchBar} type="text" placeholder="Search.."></Bar>
-            </Search>
+            </Search> */}
 
             <Options className="col-xl-4 col-5">
                 {options.map(option => (

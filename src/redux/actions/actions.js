@@ -97,17 +97,17 @@ export const removeFavourite = item => {
     }
 }
 
-export const addCart = item => {
+export const addCart = (id, color, size, quantity) => {
     return {
         type: 'ADD_CART',
-        item
+        id,color,size,quantity
     }
 }
 
-export const removeCart = item => {
+export const removeCart = id => {
     return {
         type: 'REMOVE_CART',
-        item
+        id
     }
 }
 
@@ -128,6 +128,14 @@ export const isLogged = (name) => {
     }
 }
 
+
+export const singleItem = (id) => {
+    return {
+        type: 'SET_ITEM',
+        id
+
+    }
+}
 
 
 

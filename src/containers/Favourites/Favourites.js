@@ -9,6 +9,7 @@ import {  removeFavourite } from '../../redux/actions/actions'
 
 const Wrapper = styled.section`
 width: 60vw;
+min-height: 70vh;
 margin: 3rem 20vw;
 `
 
@@ -18,6 +19,10 @@ margin-top: 1.2rem;
 border-top: 4px solid rgba(0,0,0, .3);
 border-bottom: 4px solid rgba(0,0,0, .3);
 padding: 0;
+h2 {
+    width: 60vw;
+    text-align: center;
+}
 `
 
 const Item = styled.li`
@@ -66,6 +71,7 @@ function Favourites() {
                                 sizes={product.sizes}/>
                     </Item>
                 ))}
+                {favouritesProducts.length === 0 ? <h2>Nic tutaj nie ma</h2> : ""}
             </List>
         </Wrapper>
     )

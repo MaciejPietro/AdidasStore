@@ -7,7 +7,7 @@ flex-direction: column;
 justify-content: center;
 `
 const Header = styled.div`
-width: 100%;
+
 color: black;
 font-size: 4rem;
 font-family: 'Aga';
@@ -16,6 +16,9 @@ letter-spacing: ${({letterSpacing}) => letterSpacing};
 word-break: keep-all;
 display: flex;
 text-align: center;
+b {
+    letter-spacing: 3px;
+}
 @media (max-width: 420px) {
     font-size: 3rem;
     line-height: 3rem;
@@ -29,10 +32,10 @@ text-align: center;
 function Heading({text, textBold, letterSpacing}) {
     return (
         <Wrapper>
-            <Header className="mt-4" letterSpacing={letterSpacing}>
+            <Header className="mt-4 mx-auto" letterSpacing={letterSpacing}>
                 {text}
             </Header>
-            <Header>
+            <Header >
                 <b className="mx-auto">{textBold}</b>
             </Header>
         </Wrapper>

@@ -5,6 +5,7 @@ import { changeFavourite } from './inFavourite'
 import { changeCart } from './inCart'
 import { combineReducers } from 'redux';
 import { login, isLogged } from './login'
+import { singleItem } from './singleItem'
 
 const reducers = combineReducers({
     sidebar: toggleSidebar,
@@ -16,7 +17,8 @@ const reducers = combineReducers({
     changeFavourite,
     changeCart,
     login,
-    isLogged
+    isLogged,
+    singleItem
 })
 
 export default reducers

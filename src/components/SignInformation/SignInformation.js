@@ -76,7 +76,7 @@ useEffect(() => {
             ref={loginView} 
             isLoginVisible={isLoginVisible}
             login>
-            <h5><b>Zaloguj sie</b>, is korzystaj z kodu rabatowego</h5>
+            <h5><b>Zaloguj sie</b>, i skorzystaj z kodu rabatowego</h5>
             {isLogged ? <p>Zaloguj sie uzywajac danych ktore podales w formularzu rejestreacji</p> :
             <p><b>Uzyj tych danych do logowania</b><br /> login: <b>admin</b> haslo: <b>123</b></p>}
             <p><b>Nie masz konta ?</b><br /> Zarejestruj sie klikajac przycisk ponizej</p>

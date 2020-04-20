@@ -53,9 +53,8 @@ padding: .7rem 1rem;
 margin-right: 10px;
 display: flex;
 flex-direction: row;
-z-index: 2;
-border: 1.4px solid transparent;
 white-space: nowrap;
+border: 1.4px solid transparent;
 cursor: default;
 &:nth-last-child(2) {
     width : 60%;
@@ -83,16 +82,14 @@ cursor: default;
 const Drop = styled.div`
 display: none;
 opacity: ${({flag}) => flag.length === 0 ? "0" : "1"};
-border: 2px solid red;
 font-size: .7rem;
 position: absolute;
 margin-top: 2.2rem;
-margin-left: -1.05rem;
+margin-left: -1.10rem;
 flex-direction: column;
 border: 1.4px solid black;
-border-top: none;
 background-color: white;
-z-index: 3;
+z-index: 0;
 `
 
 const Icon = styled.span`
@@ -159,8 +156,7 @@ function Filters({click, checkboxClick, sortClick, sortText}) {
     return (
         <>
             <Wrapper >
-                {filters.map(filter => (
-                        // eslint-disable-next-line react/jsx-no-duplicate-props
+                {filters.map(filter => (              
                         <Option key={filter.name} onClick={click}>
                             <p>{filter.name}</p>
                             <Icon img={filter.icon}></Icon>

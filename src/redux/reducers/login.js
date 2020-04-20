@@ -17,11 +17,15 @@ export const login = (state = initialData, action) => {
     }
 }
 
+const initalLoggedData = {
+    isLogged: false,
+    name: ''
+}
 
-export const isLogged = (state = false, action) => {
+export const isLogged = (state = initalLoggedData, action) => {
     switch(action.type) {
         case 'IS_LOGGED':
-            return state = {isLogged: !state, name: action.name}
+            return state = {isLogged: !state.isLogged , name: action.name}
         default:
             return state
     }

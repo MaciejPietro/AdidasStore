@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import Shoes from '../../img/shoes/shoes1.jpg'
+import { useSelector } from 'react-redux'
+import { products } from '../../store/store'
 
 
 
@@ -17,7 +19,7 @@ height: 30rem;
 
 
 margin: 2rem 1rem 0 auto;
-background: url(${Shoes}) no-repeat center ;
+background: url(${({img}) => img}) no-repeat center ;
 background-size: contain;
 @media (max-width: 991px) {
     margin: 2rem auto 0 auto;
@@ -29,9 +31,10 @@ background-size: contain;
 `
 
 export function ItemImage() {
+    const singleItemId = useSelector(state => state.singleItem);
     return (
         <Image>
-                <ImageWrapper>
+                <ImageWrapper img={products[singleItemId].image}>
 
                 </ImageWrapper>
         </Image>
