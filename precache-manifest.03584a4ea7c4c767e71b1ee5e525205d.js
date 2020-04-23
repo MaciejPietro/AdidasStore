@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4e7dd3d8b92a1de8c32113fcbd550f51",
+    "revision": "71fc64065f0da0baf24afe9f769e571b",
     "url": "/AdidasStore/index.html"
   },
   {
-    "revision": "9c273618ae7b0ffafb14",
+    "revision": "6889be3a383843cff86f",
     "url": "/AdidasStore/static/css/2.de424728.chunk.css"
   },
   {
-    "revision": "712d6c8217e6a171c6f5",
+    "revision": "3bbd70d23be54f76fce7",
     "url": "/AdidasStore/static/css/main.612a3cfb.chunk.css"
   },
   {
-    "revision": "9c273618ae7b0ffafb14",
-    "url": "/AdidasStore/static/js/2.9213680f.chunk.js"
+    "revision": "6889be3a383843cff86f",
+    "url": "/AdidasStore/static/js/2.521df298.chunk.js"
   },
   {
-    "revision": "fed73c0e498e82c1b612893de5d07fde",
-    "url": "/AdidasStore/static/js/2.9213680f.chunk.js.LICENSE.txt"
+    "revision": "a1a636632721a402612df3e043dd630d",
+    "url": "/AdidasStore/static/js/2.521df298.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "712d6c8217e6a171c6f5",
-    "url": "/AdidasStore/static/js/main.4096955f.chunk.js"
+    "revision": "3bbd70d23be54f76fce7",
+    "url": "/AdidasStore/static/js/main.936c4ee2.chunk.js"
   },
   {
     "revision": "379d3afead4abb3f7578",
