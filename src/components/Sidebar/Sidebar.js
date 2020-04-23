@@ -9,7 +9,7 @@ width: 50vw;
 height: 12rem;
 background-color: white;
 position: absolute;
-top: 10vh;
+top: 5rem;
 right: 0;
 z-index: 3;
 border-bottom: 2px solid black;

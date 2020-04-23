@@ -5,7 +5,6 @@ import { v4 as uuidv4 } from 'uuid';
 const Colors = styled.div`
 display: flex;
 align-items: center;
-padding: .5rem;
 p {
     font-size: .8rem;
     letter-spacing: .8px;
@@ -31,7 +30,7 @@ function FormColors({colors, selectColor, id, text}) {
 
 
     return (
-        <Colors className="col-12 row m-0">
+        <Colors className="col-12 row m-0 p-0">
             <p>{text}</p>
             {colors.map(color => (
                 <Color 

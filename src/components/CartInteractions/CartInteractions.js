@@ -3,8 +3,6 @@ import styled from 'styled-components'
 import FormSize from '../Form/FormSize'
 import FormQuantity from '../Form/FormQuantity'
 import FormColors from '../Form/FormColors'
-import { useDispatch } from 'react-redux'
-import { addFavourite, removeFavourite, addCart, removeCart, singleItem } from '../../redux/actions/actions'
 
 
 
@@ -18,8 +16,6 @@ p {
 
 
 export function CartInteractions({sizes, colors, id}) {
-    const dispatch = useDispatch()
-
 
     const addColorStyle = (e) => {
         const favouriteColors = document.querySelectorAll(`.favouriteColors-${id}`)
@@ -32,8 +28,6 @@ export function CartInteractions({sizes, colors, id}) {
 
     const selectColor = (e) => {
         addColorStyle(e)
-
-
     }
 
 

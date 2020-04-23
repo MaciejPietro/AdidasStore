@@ -13,10 +13,10 @@ import { Link } from "react-router-dom";
 
 const Wrapper = styled.nav`
 width: 100vw;
-height: 10vh;
+height: 5rem;
 box-sizing: border-box;
 z-index: 2;
-padding: 2vh 7vw;
+padding: .6rem 7vw;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
@@ -54,7 +54,7 @@ const Option = styled(Link)`
 display: flex;
 flex-direction: row;
 min-width: 8rem;
-height: 6vh;
+height: 4rem;
 cursor: pointer;
 color: black;
  p {
@@ -93,47 +93,14 @@ div {
  @media (max-width: 991px) {
     min-width: 0;
      p {    
-         opacity: 0;
+         display: none;
          font-size: .7rem;
      }
  }
-`
+ @media (max-width: 467px) {
 
-// const Search = styled.label`
-// display: flex;
-// flex-direction: row;
-// align-items: center;
-// &::after {
-//     content: '';
-//     position: relative;
-//     height: 2rem;
-//     width: 2rem;
-//     margin-top: .4rem;
-//     background-color: black;
-//     background-image: url(${({img}) => img});
-//     filter: ${({active}) => active ? "" : "invert(1)"};
-//     background-repeat: no-repeat;
-//     border-radius: 50%;
-//     background-position: center;
-//     background-size: 50%;
-//     transition: .4s;
-// }
-// `
-// const Bar = styled.input`
-// margin-top: .4rem;
-// height: 2.13rem;
-// transform: translate(2.1rem);
-// border-radius: 50px 50px 50px 50px;
-// border: 1px solid black;
-// padding-left: 10px;
-// transition: .8s;
-// width: ${({active}) => active ? "20vw" : "2.2rem"};
-// max-width: 14rem;
-// outline: none;
-// @media (max-width: 575px) {
-//     width: ${({active}) => active ? "36vw" : "2.2rem"};
-// }
-// `
+ }
+`
 
 const Icon = styled.span`
 display: block;
@@ -228,7 +195,7 @@ const options = [
                     <Bar onClick={toggleSearchBar} active={searchBar} type="text" placeholder="Search.."></Bar>
             </Search> */}
 
-            <Options className="col-xl-4 col-5">
+            <Options className="col-xl-4 col-sm-5 col-8">
                 {options.map(option => (
                     <Option 
                         key={option.name} 

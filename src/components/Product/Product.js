@@ -5,8 +5,9 @@ import hearthBlack from '../../img/icons/favouriteBlack.png'
 import arrowRight from '../../img/icons/arrowRight.png'
 import { useDispatch, useSelector } from 'react-redux'
 import ToCartBtn from '../Buttons/ToCartBtn'
-import { addFavourite, removeFavourite, addCart, removeCart, singleItem } from '../../redux/actions/actions'
+import { addFavourite, removeFavourite, addCart, singleItem } from '../../redux/actions/actions'
 import { Link } from "react-router-dom";
+
 
 const Wrapper = styled.div`
 width: 20rem;
@@ -122,10 +123,8 @@ p:last-child {
 `
 
 function Product({img, name, price, oldPrice, opacity, category, id}) {
-const dispatch = useDispatch()
-const itemsInFacourite = useSelector(state => state.changeFavourite);
-const itemsInCart = useSelector(state => state.changeCart);
-
+    const dispatch = useDispatch()
+    const itemsInFacourite = useSelector(state => state.changeFavourite);
 
     const displayCategory = () => {
         if(category === "man") {
@@ -146,15 +145,15 @@ const itemsInCart = useSelector(state => state.changeCart);
     }
 
     const addItemToCart = (e) => {
-        if(itemsInCart.arr.includes(e.currentTarget.id)) {
-            dispatch(removeCart(e.currentTarget.id))
-        } else if(!itemsInCart.arr.includes(e.currentTarget.id)) {
-            dispatch(addCart(e.currentTarget.id, "", "", ""))
-        }
+        if(e.currentTarget.getAttribute('disabled') === 'disabled') return;
+
+        dispatch(addCart(e.currentTarget.getAttribute('id')))
+
+
+        e.currentTarget.setAttribute('disabled', 'disabled');
     }
 
     const setItemIdToSingleView = () => {
-        console.log(id)
         dispatch(singleItem(id))
     }
 

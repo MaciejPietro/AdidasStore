@@ -5,7 +5,7 @@ import { products }from '../../store/store'
 import Heading from '../../components/Heading/Heading'
 import { FavouritesDescription as Description } from '../../components/FavouritesDescription/FavouritesDescription'
 import { FavouritesInteractions } from '../../components/FavouritesInteractions/FavouritesInteractions'
-import {  removeFavourite } from '../../redux/actions/actions'
+import { removeFavourite, addCart } from '../../redux/actions/actions'
 
 const Wrapper = styled.section`
 width: 60vw;
@@ -37,13 +37,21 @@ margin: 1.2rem 0;
 function Favourites() {
     const dispatch = useDispatch()
     const favour = useSelector(state => state.changeFavourite);
-    
    
 
     const favouritesProducts = products.filter(product => {
         const item = favour.arr.includes(product.id.toString()) ? product : null
         return item
     })
+
+    const addToCart = (e, id) => {
+        if(e.currentTarget.getAttribute('disabled') === 'disabled') return;
+
+        console.log(e.currentTarget)
+        dispatch(addCart(e.currentTarget.getAttribute('id')))
+
+        e.currentTarget.setAttribute('disabled', 'disabled');
+    }
 
     const deleteClick = (id) => {
         dispatch(removeFavourite(id))
@@ -64,11 +72,13 @@ function Favourites() {
                                 deleteClick={deleteClick} 
                                 id={product.id} 
                                 img={product.image} 
-                                name={product.name}/>                            
+                                name={product.name}
+                                price={product.price}/>                            
                             <FavouritesInteractions 
                                 id={product.id} 
                                 colors={product.colors} 
-                                sizes={product.sizes}/>
+                                sizes={product.sizes}
+                                addToCart={addToCart}/>
                     </Item>
                 ))}
                 {favouritesProducts.length === 0 ? <h2>Nic tutaj nie ma</h2> : ""}

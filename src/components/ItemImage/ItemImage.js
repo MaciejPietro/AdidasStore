@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Shoes from '../../img/shoes/shoes1.jpg'
 import { useSelector } from 'react-redux'
 import { products } from '../../store/store'
 

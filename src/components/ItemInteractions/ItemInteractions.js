@@ -134,7 +134,7 @@ div:nth-child(3) {
 `
 
 
-export function ItemInteractions({ id, selectColor, addItemToCart, addItemToFavourite, inInFavourite, isInCart}) {
+export function ItemInteractions({ id, selectColor, addItemToCart, addItemToFavourite, inInFavourite}) {
     const singleItemId = useSelector(state => state.singleItem);
 
 

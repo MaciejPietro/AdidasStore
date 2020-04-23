@@ -7,10 +7,10 @@ import checked from '../../img/icons/checked.png'
 
 const filters = [
     {
-        name: "Plec",
+        name: "Płeć",
         icon: arrowDown,
         type: "dropdown",
-        choices: ["Mezczyzna", "Kobieta", "Dziecko"],
+        choices: ["Mężczyzna", "Kobieta", "Dziecko"],
 
     },
     {
@@ -23,7 +23,7 @@ const filters = [
         name: "Kolor",
         icon: arrowDown,
         type: "dropdown",
-        choices: ["czarny", "bialy", "czerwony", "niebieski", "inne"],
+        choices: ["czarny", "biały", "czerwony", "niebieski", "inne"],
     },
     {
         name: "",
@@ -31,10 +31,10 @@ const filters = [
         choices: []
     },
     {
-        name: "Sortuj wedlug",
+        name: window.innerWidth < 400 ? "Sortuj" : "Sortuj według",
         icon: arrowDown,
         type: "sort",
-        choices: ["Cena rosnaco", "Cena malejaco", "Rozmiar rosnaco", "Rozmiar malejaco"]
+        choices: ["Cena rosnąco", "Cena malejąco", "Rozmiar rosnąco", "Rozmiar malejąco"]
     }
   ]
   
@@ -47,6 +47,9 @@ margin-top: 1rem;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
+@media (max-width: 576px) {
+    justify-content: flex-start;
+}
 `
 const Option = styled.div`
 padding: .7rem 1rem;
@@ -73,9 +76,26 @@ cursor: default;
         width: 36%;
     }
 }
+
 @media (max-width: 676px) {
     &:nth-last-child(2) {
         display: none;
+    }
+}
+@media (max-width: 576px) {
+
+    .arrow {
+        display: none;
+    }
+
+    p {
+        font-size: .8rem;
+    }
+}
+@media (max-width: 400px) {
+    margin: 0;
+    p {
+        font-size: .8rem;
     }
 }
 `
@@ -159,7 +179,7 @@ function Filters({click, checkboxClick, sortClick, sortText}) {
                 {filters.map(filter => (              
                         <Option key={filter.name} onClick={click}>
                             <p>{filter.name}</p>
-                            <Icon img={filter.icon}></Icon>
+                            <Icon img={filter.icon} className="arrow"></Icon>
                             <Drop flag={filter.choices}>
                                 {filter.choices.map(option => (
                                     <Label key={option}>

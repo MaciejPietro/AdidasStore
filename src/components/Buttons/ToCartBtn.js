@@ -5,7 +5,7 @@ import cart from '../../img/icons/cart.png'
 const Button = styled.button`
 width: 5.8rem;
 height: 1.8rem;
-border: 1.4px solid gray;
+border: 1.4px solid grey;
 background-color: white;
 display: flex;
 flex-direction: row;
@@ -14,7 +14,7 @@ font-size: .7rem;
 color: gray;
 transition: .5s;
 &:hover {
-    border: 1.4px solid black; 
+    border: 1.4px solid black;
     color: black;
 }
 `
@@ -28,6 +28,7 @@ background-repeat: no-repeat;
 margin-top: 2px;
 `
 function ToCartBtn({click, id}) {
+
     return (
         <Button className="ml-auto mr-3 p-0 pl-1" id={id} onClick={click}>
             Do koszyka

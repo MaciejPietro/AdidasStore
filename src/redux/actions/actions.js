@@ -97,17 +97,18 @@ export const removeFavourite = item => {
     }
 }
 
-export const addCart = (id, color, size, quantity) => {
+export const addCart = item => {
     return {
         type: 'ADD_CART',
-        id,color,size,quantity
+        item
+        // name, color, size, quantity
     }
 }
 
-export const removeCart = id => {
+export const removeCart = item => {
     return {
         type: 'REMOVE_CART',
-        id
+        item
     }
 }
 

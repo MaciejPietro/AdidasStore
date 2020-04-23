@@ -1,16 +1,21 @@
 import React from 'react';
+import { createGlobalStyle } from 'styled-components'
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import Paul from './img/fonts/Paul.ttf'
 import Capleton from './img/fonts/Paul.ttf'
-import { createGlobalStyle } from 'styled-components'
+
+
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
 import { useSelector } from 'react-redux'
+
 import NavbarWhite from './components/NavbarWhite/NavbarWhite'
 import NavbarBlack from './components/NavbarBlack/NavbarBlack'
+
 import Home from './containers/Home/Home'
 import Products from './containers/Products/Products'
 import Favourites from './containers/Favourites/Favourites'
@@ -71,8 +76,7 @@ function App() {
           <Route path="/cart">
             <Cart />
           </Route>
-          {/* <Route path={`/item/${singleItemId}`}> */}
-          <Route path="/item">
+          <Route path={`/item/${singleItemId}`}>
             <Item />
           </Route>
       </Switch>

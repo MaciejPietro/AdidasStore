@@ -4,7 +4,7 @@ import Modal from 'react-modal';
 import { useDispatch } from 'react-redux'
 import { toggleLogModal } from '../../redux/actions/actions'
 import { useSelector } from 'react-redux'
-import { login, isLogged } from '../../redux/actions/actions'
+import { isLogged } from '../../redux/actions/actions'
 import UserProfile from '../../components/UserProfile/UserProfile'
 
 

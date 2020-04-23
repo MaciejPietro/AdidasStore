@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import Menu from '../Menu/Menu'
 import Sidebar from '../Sidebar/Sidebar'
-import { Link } from "react-router-dom";
 
 
 const Wrapper = styled.nav`

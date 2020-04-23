@@ -60,7 +60,7 @@ const Delete = styled.button`
     width: 3rem;
 `
 
-export function FavouritesDescription({img, name, id, deleteClick}) {
+export function FavouritesDescription({img, name, id, deleteClick, price}) {
     return (
         <Description className="col-md-8 col-12">
                         <Image shoes={img}/>
@@ -70,7 +70,7 @@ export function FavouritesDescription({img, name, id, deleteClick}) {
                                 <p>Meskie</p>
                                 <p>Dostepne</p>
                             </div>
-                            <Price>Cena: 450 zl</Price>
+                            <Price>Cena: {price} zl</Price>
                             <Delete onClick={deleteClick.bind(this, id)}>Usun</Delete>
                         </Details>
                     </Description>

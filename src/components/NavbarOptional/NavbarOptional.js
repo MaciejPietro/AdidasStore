@@ -36,12 +36,7 @@ span {
     }
 }
 `
-const ToShop = styled(Link)`
 
-`
-const ToCart = styled(Link)`
-
-`
 const LeftArrow = styled.span`
 display: block;
 width: 2rem;

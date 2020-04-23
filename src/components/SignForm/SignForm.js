@@ -212,6 +212,7 @@ const SignForm = ({captchaCode, generateCaptcha, isLoginVisible, setLoginVisible
             return () => {
                 clearTimeout(displayProperForm)
               }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isLoginVisible])
 
     return (

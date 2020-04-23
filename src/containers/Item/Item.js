@@ -5,8 +5,7 @@ import {ItemInteractions as Interactions} from '../../components/ItemInteraction
 import { ItemImage as Image } from '../../components/ItemImage/ItemImage'
 import { products }from '../../store/store'
 import { useDispatch, useSelector } from 'react-redux'
-import { addFavourite, removeFavourite, addCart, removeCart } from '../../redux/actions/actions'
-import { Link } from "react-router-dom";
+import { addFavourite, removeFavourite, addCart } from '../../redux/actions/actions'
 
 const Wrapper = styled.section`
 width: 100vw;
@@ -27,7 +26,6 @@ function Item() {
     const dispatch = useDispatch()
     const itemsInFavourite = useSelector(state => state.changeFavourite);
     const singleItemId = useSelector(state => state.singleItem);
-    const itemsInCart = useSelector(state => state.changeCart);
     const [ isInCart, setInCart ] = useState(false)
     const num = singleItemId.toString()
     const inInFavourite = itemsInFavourite.arr.includes(singleItemId.toString())
@@ -42,12 +40,15 @@ function Item() {
         setInCart(!isInCart)
     }
 
-    const addItemToCart = () => {
-        if(itemsInCart.arr.includes(num)) {
-            dispatch(removeCart(num))
-        } else if(!itemsInCart.arr.includes(num)) {
-            dispatch(addCart(num))
-        }
+    const addItemToCart = (e) => {
+    
+
+        if(e.currentTarget.getAttribute('disabled') === 'disabled') return;
+
+        dispatch(addCart(num))
+
+
+        e.currentTarget.setAttribute('disabled', 'disabled');
     }
 
 

@@ -23,6 +23,11 @@ import shoes22 from '../img/shoes/shoes22.jpg'
 import shoes23 from '../img/shoes/shoes23.png'
 import shoes24 from '../img/shoes/shoes24.jpg'
 
+import method1 from '../img/icons/method1.png'
+import method2 from '../img/icons/method2.png'
+import method3 from '../img/icons/method3.png'
+import method4 from '../img/icons/method4.png'
+
 
 
 export const products = [
@@ -358,5 +363,31 @@ export const deliveryMethods = [
         price: 0
     },
 ]
+
+export const payMethods = [
+    {
+        id: 0,
+        text: 'Visa',
+        img: method1
+    },
+    {
+        id: 1,
+        text: 'Paypal',
+        img: method2
+    },
+    {
+        id: 2,
+        text: 'Maestro',
+        img: method3
+    },
+    {
+        id: 3,
+        text: 'Bitcoin',
+        img: method4
+    }
+]
+
+
+
 
 
